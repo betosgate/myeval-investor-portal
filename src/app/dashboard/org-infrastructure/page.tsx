@@ -141,7 +141,7 @@ export default function OrgInfrastructurePage() {
           Build Sequence — Phase by Phase
         </h2>
         <p className="text-sm text-muted-foreground">
-          <Link href="/role-definitions" className="text-blue-400 hover:underline">See full role definitions with job descriptions, KPIs, and communication flows →</Link>
+          <Link href="/dashboard/role-definitions" className="text-blue-400 hover:underline">See full role definitions with job descriptions, KPIs, and communication flows →</Link>
         </p>
 
         {companyTimeline.map((phase) => (

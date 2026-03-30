@@ -42,7 +42,7 @@ export default function CountriesPage() {
           </h2>
           <div className="grid grid-cols-2 gap-4">
             {list.map((c) => (
-              <Link key={c.slug} href={`/countries/${c.slug}`}>
+              <Link key={c.slug} href={`/dashboard/countries/${c.slug}`}>
                 <Card className="hover:border-primary/50 transition-colors cursor-pointer h-full">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-base flex items-center justify-between">

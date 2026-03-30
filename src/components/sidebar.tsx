@@ -30,34 +30,34 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
 const navItems = [
-  { href: "/", label: "Executive Summary", icon: LayoutDashboard },
-  { href: "/countries", label: "Global Markets", icon: Globe },
-  { href: "/countries/vietnam", label: "Vietnam", icon: MapPin, indent: true },
-  { href: "/countries/india", label: "India", icon: MapPin, indent: true },
-  { href: "/countries/bangladesh", label: "Bangladesh", icon: MapPin, indent: true },
-  { href: "/countries/thailand", label: "Thailand", icon: MapPin, indent: true },
-  { href: "/countries/colombia", label: "Colombia", icon: MapPin, indent: true },
-  { href: "/countries/brazil", label: "Brazil", icon: MapPin, indent: true },
-  { href: "/countries/argentina", label: "Argentina", icon: MapPin, indent: true },
-  { href: "/countries/bolivia", label: "Bolivia", icon: MapPin, indent: true },
-  { href: "/revenue", label: "Revenue Model", icon: DollarSign },
-  { href: "/financials", label: "Financial Projections", icon: TrendingUp },
-  { href: "/staffing", label: "Team & Staffing", icon: Users },
-  { href: "/org-infrastructure", label: "Org Infrastructure", icon: Network },
-  { href: "/role-definitions", label: "Role Definitions", icon: ClipboardList },
-  { href: "/timeline", label: "Launch Timeline", icon: CalendarClock },
-  { href: "/integration-strategy", label: "API & Integration", icon: Plug },
-  { href: "/ground-operations", label: "Ground Operations", icon: MapPinned },
-  { href: "/outreach-playbook", label: "Outreach Playbook", icon: Megaphone },
-  { href: "/value-propositions", label: "Value Propositions", icon: Handshake },
-  { href: "/execution-protocol", label: "Execution Protocol", icon: Radio },
-  { href: "/operational-costs", label: "Operational Costs", icon: Receipt },
-  { href: "/competitive-analysis", label: "Competitive Analysis", icon: Swords },
-  { href: "/risk-matrix", label: "Risk Matrix", icon: AlertOctagon },
-  { href: "/governance", label: "Governance & IP", icon: Crown },
-  { href: "/us-market", label: "US Market (WebMD)", icon: Target },
-  { href: "/fund-allocation", label: "Fund Allocation", icon: BarChart3 },
-  { href: "/why-myeval", label: "Why MyEval.ai", icon: Building2 },
+  { href: "/dashboard", label: "Executive Summary", icon: LayoutDashboard },
+  { href: "/dashboard/countries", label: "Global Markets", icon: Globe },
+  { href: "/dashboard/countries/vietnam", label: "Vietnam", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/india", label: "India", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/bangladesh", label: "Bangladesh", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/thailand", label: "Thailand", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/colombia", label: "Colombia", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/brazil", label: "Brazil", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/argentina", label: "Argentina", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/bolivia", label: "Bolivia", icon: MapPin, indent: true },
+  { href: "/dashboard/revenue", label: "Revenue Model", icon: DollarSign },
+  { href: "/dashboard/financials", label: "Financial Projections", icon: TrendingUp },
+  { href: "/dashboard/staffing", label: "Team & Staffing", icon: Users },
+  { href: "/dashboard/org-infrastructure", label: "Org Infrastructure", icon: Network },
+  { href: "/dashboard/role-definitions", label: "Role Definitions", icon: ClipboardList },
+  { href: "/dashboard/timeline", label: "Launch Timeline", icon: CalendarClock },
+  { href: "/dashboard/integration-strategy", label: "API & Integration", icon: Plug },
+  { href: "/dashboard/ground-operations", label: "Ground Operations", icon: MapPinned },
+  { href: "/dashboard/outreach-playbook", label: "Outreach Playbook", icon: Megaphone },
+  { href: "/dashboard/value-propositions", label: "Value Propositions", icon: Handshake },
+  { href: "/dashboard/execution-protocol", label: "Execution Protocol", icon: Radio },
+  { href: "/dashboard/operational-costs", label: "Operational Costs", icon: Receipt },
+  { href: "/dashboard/competitive-analysis", label: "Competitive Analysis", icon: Swords },
+  { href: "/dashboard/risk-matrix", label: "Risk Matrix", icon: AlertOctagon },
+  { href: "/dashboard/governance", label: "Governance & IP", icon: Crown },
+  { href: "/dashboard/us-market", label: "US Market (WebMD)", icon: Target },
+  { href: "/dashboard/fund-allocation", label: "Fund Allocation", icon: BarChart3 },
+  { href: "/dashboard/why-myeval", label: "Why MyEval.ai", icon: Building2 },
 ];
 
 export function Sidebar() {
@@ -80,7 +80,7 @@ export function Sidebar() {
       <ScrollArea className="flex-1 px-3 py-4">
         <nav className="space-y-1">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || (item.href === "/dashboard" && pathname === "/dashboard");
             const Icon = item.icon;
             return (
               <Link

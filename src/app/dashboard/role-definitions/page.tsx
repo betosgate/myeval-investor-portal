@@ -19,7 +19,7 @@ export default function RoleDefinitionsPage() {
   return (
     <div className="space-y-8">
       <div>
-        <Link href="/org-infrastructure" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 mb-4">
+        <Link href="/dashboard/org-infrastructure" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 mb-4">
           <ArrowLeft className="h-3 w-3" /> Back to Org Infrastructure
         </Link>
         <h1 className="text-3xl font-bold tracking-tight">Role Definitions & Communication Flows</h1>

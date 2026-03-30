@@ -41,7 +41,7 @@ export default async function CountryPage({
     <div className="space-y-8">
       <div>
         <Link
-          href="/countries"
+          href="/dashboard/countries"
           className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 mb-4"
         >
           <ArrowLeft className="h-3 w-3" /> Back to Markets
