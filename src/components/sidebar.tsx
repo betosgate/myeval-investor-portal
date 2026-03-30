@@ -14,6 +14,10 @@ import {
   Building2,
   BarChart3,
   MapPin,
+  Plug,
+  MapPinned,
+  Megaphone,
+  Handshake,
 } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
@@ -33,6 +37,10 @@ const navItems = [
   { href: "/financials", label: "Financial Projections", icon: TrendingUp },
   { href: "/staffing", label: "Team & Staffing", icon: Users },
   { href: "/timeline", label: "Launch Timeline", icon: CalendarClock },
+  { href: "/integration-strategy", label: "API & Integration", icon: Plug },
+  { href: "/ground-operations", label: "Ground Operations", icon: MapPinned },
+  { href: "/outreach-playbook", label: "Outreach Playbook", icon: Megaphone },
+  { href: "/value-propositions", label: "Value Propositions", icon: Handshake },
   { href: "/us-market", label: "US Market (WebMD)", icon: Target },
   { href: "/fund-allocation", label: "Fund Allocation", icon: BarChart3 },
   { href: "/why-myeval", label: "Why MyEval.ai", icon: Building2 },
