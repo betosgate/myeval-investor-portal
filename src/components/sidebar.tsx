@@ -23,6 +23,8 @@ import {
   AlertOctagon,
   Crown,
   Radio,
+  Network,
+  ClipboardList,
 } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
@@ -41,6 +43,8 @@ const navItems = [
   { href: "/revenue", label: "Revenue Model", icon: DollarSign },
   { href: "/financials", label: "Financial Projections", icon: TrendingUp },
   { href: "/staffing", label: "Team & Staffing", icon: Users },
+  { href: "/org-infrastructure", label: "Org Infrastructure", icon: Network },
+  { href: "/role-definitions", label: "Role Definitions", icon: ClipboardList },
   { href: "/timeline", label: "Launch Timeline", icon: CalendarClock },
   { href: "/integration-strategy", label: "API & Integration", icon: Plug },
   { href: "/ground-operations", label: "Ground Operations", icon: MapPinned },
