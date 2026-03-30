@@ -827,7 +827,7 @@ export const softwareLicenses: SoftwareLicense[] = [
   { tool: "MDM (Device Management)", vendor: "Jamf Business", costModel: "$7.17/device/month", monthlyCost: 860, annualCost: 10_320, notes: "120 devices. MacBook fleet management." },
   { tool: "Analytics -- Product", vendor: "Mixpanel (Growth)", costModel: "$28/month base + MTU", monthlyCost: 1_200, annualCost: 14_400, notes: "Scales with monthly tracked users. Budget assumes 5M MTU by Year 2." },
   { tool: "Analytics -- Business", vendor: "Metabase (Pro Cloud)", costModel: "$500/month", monthlyCost: 500, annualCost: 6_000, notes: "Internal business analytics dashboards." },
-  { tool: "Cloud Hosting", vendor: "AWS + Vercel", costModel: "Variable -- see infra section", monthlyCost: 18_000, annualCost: 216_000, notes: "See cloud infrastructure breakdown below for detail." },
+  // Cloud hosting is itemized separately in cloudInfrastructure section below — not double-counted here
   { tool: "AI Platform Costs", vendor: "Anthropic Claude API", costModel: "Per-token pricing", monthlyCost: 25_000, annualCost: 300_000, notes: "Core AI engine. $0.003/input, $0.015/output per 1K tokens. Budget scales with user volume." },
   { tool: "Email / Productivity", vendor: "Google Workspace Business Standard", costModel: "$14/user/month", monthlyCost: 1_680, annualCost: 20_160, notes: "120 seats. Gmail, Drive, Calendar, Meet." },
   { tool: "Legal / Compliance", vendor: "Vanta (SOC 2 automation)", costModel: "$3,500/month", monthlyCost: 3_500, annualCost: 42_000, notes: "Automated compliance monitoring for SOC 2, HIPAA, GDPR equivalents." },
