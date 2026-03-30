@@ -1,0 +1,1 @@
+const fs=require("fs"); const c=fs.readFileSync("_page_content.txt","utf8"); fs.writeFileSync("src/app/operational-costs/page.tsx",c); console.log("done",c.length);
