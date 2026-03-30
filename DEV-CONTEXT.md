@@ -1,15 +1,15 @@
 # MyEval.ai Investor Portal — Development Context
 
 > **Read this file if resuming from a crash or new terminal session.**
-> Last updated: 2026-03-30
+> Last updated: 2026-03-30 (end of major build session)
 
 ## Quick Start
 ```bash
 cd C:/Users/Admin/OneDrive/Documents/ClaudeProjects/MyEvalBusiness/myeval-investor-portal
-npm run dev    # localhost:3000
-npm run build  # production build (must pass before deploy)
-vercel --yes --prod  # deploy to production
-git add -A && git commit -m "msg" && git push origin master  # save to GitHub
+npm run dev          # localhost:3000
+npm run build        # production build (MUST pass before deploy)
+vercel --yes --prod  # deploy to Vercel production
+git add -A && git commit -m "msg" && git push origin master
 ```
 
 ## Live URLs
@@ -17,76 +17,87 @@ git add -A && git commit -m "msg" && git push origin master  # save to GitHub
 - **GitHub:** https://github.com/betosgate/myeval-investor-portal
 - **MyEval.ai Product:** https://my-eval-ai-nextjs.vercel.app/features/walkthrough
 
-## Architecture
-- Next.js 16.2.1, TypeScript, Tailwind CSS, shadcn/ui (dark mode, new-york style)
-- Recharts for all charts/graphs
-- Lucide React for icons
-- Geist + Geist Mono fonts
-- All data in `src/lib/data/*.ts` — static TypeScript, no database needed
-- Pages in `src/app/*/page.tsx` — App Router with file-based routing
-- Client components: `src/components/charts.tsx`, `src/components/sidebar.tsx`
-- Server components: everything else
+## URL Structure
+- `/` — Full-screen investor LANDING PAGE (no sidebar). Two big cards:
+  - "Business Plan" → `/dashboard` (same tab)
+  - "Software Platform" → MyEval.ai walkthrough (**opens in new tab**)
+- `/dashboard/*` — All 28 business plan pages with sidebar navigation
 
-## Current Pages (29 static pages)
-| Route | Data Source | Content |
-|-------|-----------|---------|
-| `/` | financials, countries | Executive summary, key metrics, investment thesis |
-| `/countries` | countries | All 8 countries overview |
-| `/countries/[slug]` x8 | countries | Deep-dive per country |
-| `/revenue` | financials | 9 revenue streams |
-| `/financials` | financials | 24-month P&L, cash flow, KPIs |
-| `/staffing` | staffing | 4 strategists, 2 directors, full org chart |
-| `/timeline` | inline | 5-phase launch timeline |
-| `/integration-strategy` | integrations | 18 health system API integrations |
-| `/ground-operations` | ground-ops | 8 countries: offices, legal, banking, hiring |
-| `/outreach-playbook` | ground-ops | 32 sequenced targets with pitches |
-| `/value-propositions` | value-propositions | 14+ arguments for 5 stakeholder types |
-| `/execution-protocol` | inline | Ambassador model, RACI, communication cadence |
-| `/operational-costs` | operational-costs | Travel, equipment, software, cloud, insurance, compliance |
-| `/competitive-analysis` | inline | 6 competitors, 6 moats, 4 failure case studies |
-| `/risk-matrix` | inline | 12 risks with mitigation |
-| `/governance` | inline | Board, IP, Series B, KPIs |
-| `/us-market` | financials | WebMD alternative strategy |
-| `/fund-allocation` | financials | $50M breakdown |
-| `/why-myeval` | inline | Platform capabilities and network effects |
+## Architecture
+- Next.js 16.2.1, TypeScript, Tailwind CSS, shadcn/ui (dark mode, new-york)
+- Landing page: `src/app/page.tsx` (no layout wrapper — full screen)
+- Dashboard layout: `src/app/dashboard/layout.tsx` (includes Sidebar)
+- All dashboard pages: `src/app/dashboard/*/page.tsx`
+- Data: `src/lib/data/*.ts` (static TypeScript, no database)
+- Charts: `src/components/charts.tsx` (client component)
+- Sidebar: `src/components/sidebar.tsx` (client component)
+- Metric cards: `src/components/metric-card.tsx` (server component)
+
+## Key Leadership (confirmed by user)
+- **Beto Paredes** = CVO (Chief Visionary Officer), founder
+- **Operations Director** = first hire under Beto, manages strategists, hires initial team
+- **April 2026** = fund closes, strategists + OD start
+- **August 2026** = official launch, executive team in seats
+- **2 Ambassador-Directors** = PITCH ONLY. Never manage, hire, negotiate, or follow up.
+
+## All Pages (31)
+| Route | Content |
+|-------|---------|
+| `/` | Landing page with 2 cards (Business Plan + Software Platform) |
+| `/dashboard` | Executive summary, key metrics, charts |
+| `/dashboard/countries` | 8 countries overview |
+| `/dashboard/countries/[slug]` x8 | Deep-dive per country |
+| `/dashboard/revenue` | 9 revenue streams |
+| `/dashboard/financials` | 24-month P&L, cash flow, KPIs |
+| `/dashboard/staffing` | 4 strategists, 2 directors, full org chart |
+| `/dashboard/org-infrastructure` | April-August build sequence, org charts |
+| `/dashboard/role-definitions` | 14 roles with full JDs, communication flows |
+| `/dashboard/timeline` | 5-phase launch timeline |
+| `/dashboard/integration-strategy` | 18 health system API integrations |
+| `/dashboard/ground-operations` | 8 countries: offices, legal, banking, hiring |
+| `/dashboard/outreach-playbook` | 32 targets with pitches and domino effects |
+| `/dashboard/value-propositions` | 14+ arguments for 5 stakeholder types |
+| `/dashboard/execution-protocol` | Ambassador model, RACI, comms cadence |
+| `/dashboard/operational-costs` | Travel, equipment, software, cloud, insurance |
+| `/dashboard/competitive-analysis` | 6 competitors, 6 moats, 4 failure lessons |
+| `/dashboard/risk-matrix` | 12 risks with mitigation |
+| `/dashboard/governance` | Board, IP, Series B, KPIs |
+| `/dashboard/us-market` | WebMD alternative strategy |
+| `/dashboard/fund-allocation` | $50M breakdown |
+| `/dashboard/why-myeval` | Platform capabilities |
 
 ## Data Files
-| File | Size | Content |
-|------|------|---------|
-| countries.ts | 693 lines | 8 country profiles (market data, entry strategy, pricing, partners) |
-| financials.ts | 172 lines | 24 months, 9 revenue streams, fund allocation, key metrics |
-| staffing.ts | 229 lines | Central office (36 roles), strategists, travel directors, advisory board |
-| integrations.ts | 436 lines | 18 health system integrations with tech specs |
-| ground-ops.ts | 511 lines | 8 countries: offices, legal, banking, outreach sequences |
-| value-propositions.ts | 779 lines | Stakeholder arguments with claims, pitches, objections |
-| operational-costs.ts | 1000+ lines | Travel per country, equipment, software, cloud, insurance, compliance |
-
-## Key Design Decision: Ambassador Model
-The 2 traveling directors ONLY meet, pitch, and introduce. They NEVER:
-- Hire staff, set up entities, negotiate contracts, manage operations
-- Follow up after visits — Country Managers own all follow-ups
-- RACI matrix on `/execution-protocol` page defines everything
+| File | Lines | Content |
+|------|-------|---------|
+| countries.ts | 693 | 8 country profiles |
+| financials.ts | 172 | 24 months, 9 streams, fund allocation |
+| staffing.ts | 229 | Central office, strategists, directors |
+| integrations.ts | 436 | 18 health system APIs |
+| ground-ops.ts | 511 | 8 countries ops + outreach sequences |
+| value-propositions.ts | 779 | Stakeholder argument frameworks |
+| operational-costs.ts | 1000+ | Travel, equipment, software, cloud, insurance, compliance |
+| org-infrastructure.ts | 600+ | Timeline phases, 14 role definitions |
 
 ## Adding a New Page
-1. Create data in `src/lib/data/newdata.ts` (if needed)
-2. Create `src/app/new-page/page.tsx`
-3. If needs charts: create `src/app/new-page/name-charts.tsx` with "use client"
-4. Add to sidebar: `src/components/sidebar.tsx` (import icon, add nav item)
-5. `npx next build` → verify
-6. `git add -A && git commit && git push && vercel --yes --prod`
+1. Create `src/app/dashboard/new-page/page.tsx`
+2. Create data file if needed: `src/lib/data/newdata.ts`
+3. Add to sidebar: `src/components/sidebar.tsx` (import icon, add nav item with `/dashboard/` prefix)
+4. `npx next build` → verify
+5. `git add -A && git commit && git push && vercel --yes --prod`
 
-## Unbuilt Research Available
-These agent research reports are saved but NOT yet coded into portal pages:
-- `Strategic_Gaps_Complete.md` — board governance, IP, exit, support infra, marketing budgets, risks, partnership templates, tech scaling, cultural adaptation, KPI dashboards
-- `LATAM_Market_Entry_Research.md` — deep Colombia/Brazil/Argentina/Bolivia analysis
-- Competitive threats report — 50+ competitors, per-country threat levels, defensive moats
-- Regulatory deep dive — SaMD classification, privacy laws, AI regs for all 9 countries
+## Research Reports (not yet coded into pages)
+Saved as markdown files in project directory:
+- Strategic_Gaps_Complete.md
+- LATAM_Market_Entry_Research.md
+- MyEval_Financial_Model.md + Monthly_Projections_Detail.md
+- staffing-operations-plan.md
+- Competitive threats (50+ competitors across 9 markets)
+- Regulatory deep dive (SaMD, privacy, AI regs — all 9 countries)
 
-These could be coded into new pages: `/regulatory`, `/marketing-plan`, `/support-infrastructure`, `/cultural-adaptation`, `/partnership-templates`, `/tech-roadmap`
-
-## Memory
-Project memory saved at:
+## Memory Files
 `C:/Users/Admin/.claude/projects/C--Users-Admin-OneDrive-Documents-ClaudeProjects-MyEvalBusiness/memory/`
-- project_myeval_investor_portal.md
-- user_profile.md
-- feedback_preferences.md
+- MEMORY.md (index)
+- project_myeval_investor_portal.md (full project state)
+- user_profile.md (Beto's preferences)
+- feedback_preferences.md (working style)
+- project_leadership_structure.md (CVO → OD → strategists)
