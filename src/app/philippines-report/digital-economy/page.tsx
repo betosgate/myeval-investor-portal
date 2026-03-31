@@ -11,7 +11,7 @@ export default function DigitalEconomyPage() {
         <h1 className="text-3xl font-bold tracking-tight">Digital Economy</h1>
         <p className="text-muted-foreground mt-2">GCash (94M users), BPO ($38B), e-commerce ($22B), 10 hours/day average internet. The Philippines is a digital-first economy in a developing-country wrapper.</p>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <MetricCard label="Internet Economy" value="$28B" subtitle="Google/Temasek/Bain 2025" icon={Cpu} />
         <MetricCard label="GCash Users" value="94M" subtitle="89% mobile wallet share" icon={Users} />
         <MetricCard label="BPO Revenue" value="$38B" subtitle="1.82M employees" icon={DollarSign} />

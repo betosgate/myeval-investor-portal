@@ -22,7 +22,7 @@ export default function CountriesPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Total Population" value={fmtUsers(totalPopulation)} icon={Users} subtitle="Across 8 markets" />
         <MetricCard label="Total Investment" value={fmt(totalInvestment)} icon={TrendingUp} subtitle="Country allocation" />
         <MetricCard label="Year 1 Revenue" value={fmt(totalYear1Revenue)} icon={TrendingUp} />
@@ -59,7 +59,7 @@ export default function CountriesPage() {
                     <p className="text-xs text-muted-foreground line-clamp-2">
                       {c.entryStrategy.slice(0, 150)}...
                     </p>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                       <div>
                         <p className="text-xs text-muted-foreground">Population</p>
                         <p className="text-sm font-mono font-medium">{fmtUsers(c.population)}</p>

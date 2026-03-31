@@ -15,7 +15,7 @@ export default function GroundOperationsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Countries" value="8" icon={MapPinned} subtitle="Operational presence" />
         <MetricCard label="Offices" value="8 + US HQ" icon={Building2} subtitle="Co-working → dedicated" />
         <MetricCard label="Legal Firms" value="20+" icon={Scale} subtitle="Across all jurisdictions" />
@@ -107,7 +107,7 @@ export default function GroundOperationsPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {ops.legalCounsel.map((firm) => (
                   <div key={firm.firm} className="bg-muted/30 rounded-lg p-3">
                     <p className="text-sm font-semibold">{firm.firm}</p>

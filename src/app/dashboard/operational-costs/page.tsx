@@ -25,7 +25,7 @@ export default function OperationalCostsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Travel (Annual)" value={fmt(totalAnnualTravelCost)} icon={Plane} />
         <MetricCard label="Tech Stack" value={fmt(totalAnnualSoftwareCost + totalAnnualCloudCost)} icon={Monitor} subtitle="Software + Cloud" />
         <MetricCard label="Insurance" value={fmt(totalAnnualInsuranceCost)} icon={Shield} />
@@ -67,7 +67,7 @@ export default function OperationalCostsPage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-3 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
               <div className="bg-muted/30 rounded p-2">
                 <span className="text-muted-foreground">Per Diem: </span>
                 <span className="font-mono">${c.perDiem.totalDaily}/day</span>

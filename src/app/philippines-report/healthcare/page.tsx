@@ -15,7 +15,7 @@ export default function HealthcarePage() {
         <p className="text-muted-foreground mt-2">The most comprehensive analysis of Philippine healthcare challenges and AI-powered solutions. Data from DOH, PhilHealth, COA, WHO, and PSA.</p>
       </div>
 
-      <div className="grid grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         <MetricCard label="Market Size" value={fmt(healthcareDeepDive.totalMarketSize)} icon={DollarSign} subtitle={`${healthcareDeepDive.outOfPocketPct}% OOP`} />
         <MetricCard label="Doctors/10K" value={healthcareDeepDive.physiciansPerK.toString()} icon={Heart} subtitle="WHO min: 10" />
         <MetricCard label="Maternal Mortality" value={`${healthcareDeepDive.maternalMortality}/100K`} icon={Heart} />
@@ -29,7 +29,7 @@ export default function HealthcarePage() {
           <CardTitle className="flex items-center gap-2"><AlertTriangle className="h-5 w-5 text-red-600" /> PhilHealth — The Broken Machine</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <div className="bg-white rounded-lg p-3 border text-center">
               <p className="text-2xl font-mono font-bold text-red-600">PHP 154B</p>
               <p className="text-xs text-muted-foreground">Estimated fraud (Senate 2020 investigation)</p>
@@ -174,7 +174,7 @@ export default function HealthcarePage() {
           </p>
           <div className="bg-white rounded-lg p-3 border">
             <h4 className="text-xs font-semibold mb-1">Development Partners Spending in BARMM Health: $45-85M/year</h4>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {[
                 { org: "USAID", amt: "$15-25M/yr", focus: "Maternal/child, TB, family planning" },
                 { org: "JICA", amt: "$10-20M/yr", focus: "Hospital infrastructure (Marawi rebuild)" },
@@ -245,7 +245,7 @@ export default function HealthcarePage() {
       <Card className="border-purple-200 bg-purple-50/30">
         <CardHeader><CardTitle className="flex items-center gap-2"><Brain className="h-4 w-4" /> Mental Health Crisis</CardTitle></CardHeader>
         <CardContent className="space-y-3">
-          <div className="grid grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {[
               { v: "500-600", l: "Psychiatrists nationally" },
               { v: "0.5/100K", l: "Psychiatrist ratio (WHO: 1/10K)" },
@@ -295,7 +295,7 @@ export default function HealthcarePage() {
                   <Badge variant="outline" className="text-[10px]">{t.status}</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground">{t.purpose}</p>
-                <div className="grid grid-cols-3 gap-2 mt-2 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-2 text-xs">
                   <div><span className="text-muted-foreground">Performance: </span>{t.perf}</div>
                   <div><span className="text-muted-foreground">Cost: </span><span className="font-mono">{t.cost}</span></div>
                   <div><span className="text-muted-foreground">Requires: </span>{t.req}</div>

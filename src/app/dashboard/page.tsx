@@ -50,7 +50,7 @@ export default function ExecutiveSummary() {
       <Separator />
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           label="Total Investment"
           value="$50M"
@@ -88,7 +88,7 @@ export default function ExecutiveSummary() {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="space-y-2">
               <h3 className="font-semibold text-sm">Market Gap</h3>
               <p className="text-sm text-muted-foreground">
@@ -195,7 +195,7 @@ export default function ExecutiveSummary() {
       </Card>
 
       {/* Competitive Moats */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
           {
             icon: Zap,

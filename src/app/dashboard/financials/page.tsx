@@ -16,7 +16,7 @@ export default function FinancialsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Break-Even" value={`Month ${keyMetrics.breakEvenMonth}`} subtitle="Sep 2026" icon={CalendarClock} />
         <MetricCard label="Runway" value={`${keyMetrics.runwayMonths} months`} subtitle="At peak burn rate" icon={DollarSign} />
         <MetricCard label="Yr 2 Gross Margin" value={`${keyMetrics.grossMargin.year2}%`} icon={TrendingUp} />

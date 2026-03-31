@@ -22,7 +22,7 @@ export default function InfrastructurePage() {
         <h1 className="text-3xl font-bold tracking-tight">Infrastructure</h1>
         <p className="text-muted-foreground mt-2">$67M/day lost to Manila traffic. NAIA at 150% capacity. 79km of rail for 14M people. But $173B in the pipeline — the largest infrastructure program in Philippine history.</p>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <MetricCard label="Daily Traffic Loss" value="$67M" subtitle="$24.5B/year (5% GDP)" icon={AlertTriangle} />
         <MetricCard label="Build Better More" value="185 projects" subtitle="PHP 9.14 trillion total" icon={Building2} />
         <MetricCard label="PPP Pipeline" value="230 projects" subtitle="PHP 2.86 trillion" icon={DollarSign} />

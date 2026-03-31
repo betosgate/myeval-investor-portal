@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -65,9 +66,16 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 border-r border-border bg-card flex flex-col z-50">
+    <>
+      {/* Mobile hamburger */}
+      <button onClick={() => setOpen(!open)} className="lg:hidden fixed top-4 left-4 z-[60] h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center">
+        <span className="text-foreground text-lg">{open ? "\u2715" : "\u2630"}</span>
+      </button>
+      {open && <div className="lg:hidden fixed inset-0 bg-black/50 z-40" onClick={() => setOpen(false)} />}
+    <aside className={cn("fixed left-0 top-0 h-screen w-64 border-r border-border bg-card flex flex-col z-50 transition-transform lg:translate-x-0", open ? "translate-x-0" : "-translate-x-full")}>
       <div className="p-6">
         <Link href="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
@@ -89,6 +97,7 @@ export function Sidebar() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setOpen(false)}
                 className={cn(
                   "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors",
                   item.indent && "pl-8",
@@ -117,5 +126,6 @@ export function Sidebar() {
         </div>
       </div>
     </aside>
+    </>
   );
 }

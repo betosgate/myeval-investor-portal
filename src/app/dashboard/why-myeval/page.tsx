@@ -25,7 +25,7 @@ export default function WhyMyEvalPage() {
       </div>
 
       {/* Platform Stats */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {[
           { label: "Total Features", value: "1,063", icon: Zap },
           { label: "Specialized Portals", value: "9", icon: Building2 },
@@ -49,7 +49,7 @@ export default function WhyMyEvalPage() {
           <CardTitle>The 9-Portal Ecosystem</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { name: "Patient Portal", features: 206, desc: "AI health dashboard, vitals tracking, risk scoring, 8 dedicated workspaces" },
               { name: "Management & Admin", features: 157, desc: "User management, AI monitoring, ICD codes, billing, audit logging — 33+ modules" },
@@ -145,7 +145,7 @@ export default function WhyMyEvalPage() {
       <Card className="border-blue-600/30 bg-blue-600/5">
         <CardContent className="p-6">
           <h3 className="font-semibold text-lg mb-4">The Multi-Sided Network Effect</h3>
-          <div className="grid grid-cols-3 gap-4 text-sm text-muted-foreground">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-muted-foreground">
             <div className="space-y-2">
               <h4 className="font-medium text-foreground">Patients Attract Providers</h4>
               <p>More patients using MyEval.ai means providers need the platform to receive structured patient reports and referrals.</p>
@@ -160,7 +160,7 @@ export default function WhyMyEvalPage() {
             </div>
           </div>
           <Separator className="my-4" />
-          <div className="grid grid-cols-3 gap-4 text-sm text-muted-foreground">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-muted-foreground">
             <div className="space-y-2">
               <h4 className="font-medium text-foreground">Government Drives Employers</h4>
               <p>Government adoption validates the platform, encouraging employers to adopt for workforce wellness programs.</p>

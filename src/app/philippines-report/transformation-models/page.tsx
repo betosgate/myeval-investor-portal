@@ -139,7 +139,7 @@ export default function TransformationModelsPage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               <div className="bg-green-50 rounded-lg p-3 border border-green-200">
                 <h4 className="text-xs font-semibold text-green-700 mb-1">Projection</h4>
                 <p className="text-xs text-muted-foreground">{m.projection}</p>
@@ -161,7 +161,7 @@ export default function TransformationModelsPage() {
       <Card className="border-primary bg-primary/5">
         <CardContent className="p-6 space-y-4">
           <h3 className="font-bold text-lg">Combined 15-Year Impact</h3>
-          <div className="grid grid-cols-5 gap-3 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-center">
             {[
               { metric: "GDP/Capita", from: "$3,900", to: "$8,000-12,000" },
               { metric: "SWF Value", from: "$2.25B", to: "$100-200B" },

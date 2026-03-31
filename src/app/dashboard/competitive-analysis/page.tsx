@@ -39,7 +39,7 @@ export default function CompetitiveAnalysisPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <MetricCard label="Global Competitors Analyzed" value="6" icon={Swords} />
         <MetricCard label="Defensive Moats" value="6" icon={Shield} subtitle="Avg strength: 7.5/10" />
         <MetricCard label="Failure Case Studies" value="4" icon={AlertTriangle} subtitle="Lessons applied" />
@@ -62,7 +62,7 @@ export default function CompetitiveAnalysisPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-4 gap-2 mb-3 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mb-3 text-xs">
                 <div className="bg-muted/30 rounded p-2"><span className="text-muted-foreground">Users:</span> <span className="font-mono">{c.users}</span></div>
                 <div className="bg-muted/30 rounded p-2"><span className="text-muted-foreground">Revenue:</span> <span className="font-mono">{c.revenue}</span></div>
                 <div className="bg-muted/30 rounded p-2"><span className="text-muted-foreground">Markets:</span> {c.markets}</div>

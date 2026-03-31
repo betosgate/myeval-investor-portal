@@ -27,7 +27,7 @@ export default function HumanitarianImpactPage() {
       </div>
 
       {/* Top-Line Impact Metrics */}
-      <div className="grid grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         <MetricCard label="Lives Saved" value={fmtNum(totalImpact.livesSaved)} subtitle="Year 1-2" icon={Heart} />
         <MetricCard label="DALYs Averted" value={fmtUsers(totalImpact.dalysAverted)} subtitle="Disability-adjusted life years" icon={Shield} />
         <MetricCard label="Hospitalizations Avoided" value={fmtUsers(totalImpact.hospitalizationsAvoided)} icon={Building2} />
@@ -43,7 +43,7 @@ export default function HumanitarianImpactPage() {
             <HandHeart className="h-5 w-5" />
             Why This Is a Humanitarian Investment
           </h3>
-          <div className="grid grid-cols-3 gap-6 text-sm text-muted-foreground">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm text-muted-foreground">
             <div className="space-y-2">
               <h4 className="font-semibold text-foreground">The Crisis</h4>
               <p>2.1 billion people in our 8 target countries lack access to AI-powered health evaluation. 100 million people are pushed into poverty annually by health costs (WHO). Late-detected diseases cost health systems 4x more than early-detected ones. Traditional healthcare delivery cannot scale fast enough — there aren&apos;t enough doctors, clinics, or hospitals.</p>
@@ -183,7 +183,7 @@ export default function HumanitarianImpactPage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                 {Object.entries(c.estimatedImpact).map(([key, val]) => (
                   <div key={key} className="bg-muted/30 rounded-lg p-2 text-center">
                     <p className="text-lg font-mono font-bold">{key === "costSavings" ? fmt(val) : fmtNum(val)}</p>
@@ -250,7 +250,7 @@ export default function HumanitarianImpactPage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <div className="grid grid-cols-3 gap-4 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
                 <div>
                   <span className="text-muted-foreground">Annual Budget: </span>
                   <span className="font-medium">{fund.annualBudget}</span>
@@ -366,7 +366,7 @@ export default function HumanitarianImpactPage() {
       <Card className="border-blue-600/30 bg-blue-600/5">
         <CardContent className="p-6 space-y-4">
           <h3 className="font-semibold text-lg">Why AI Health Platforms Deliver More Impact Per Dollar Than Traditional Programs</h3>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: TrendingUp, title: "Infinite Scalability", desc: "One platform serves 20M users. A clinic serves thousands. Digital health scales without building physical infrastructure — the smartphone IS the clinic." },
               { icon: Target, title: "Real-Time Measurement", desc: "Traditional programs measure impact through annual surveys with 2-year lags. MyEval.ai measures impact in real-time: evaluations completed, risks identified, referrals made — dashboarded daily." },

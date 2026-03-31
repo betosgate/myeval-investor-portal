@@ -11,7 +11,7 @@ export default function OFWPage() {
         <h1 className="text-3xl font-bold tracking-tight">OFW & Remittances Economy</h1>
         <p className="text-muted-foreground mt-2">10M+ overseas workers. $36.1B/year in remittances (9.4% of GDP). The human engine that keeps the Philippine economy running — and the human cost it extracts.</p>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <MetricCard label="OFWs Deployed" value="2.19M" subtitle="Annual (2024 PSA)" icon={Plane} />
         <MetricCard label="Remittances" value="$36.1B" subtitle="9.4% of GDP" icon={DollarSign} />
         <MetricCard label="Total Diaspora" value="10M+" subtitle="Across 200+ countries" icon={Globe} />

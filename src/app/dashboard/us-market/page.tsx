@@ -16,7 +16,7 @@ export default function USMarketPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="TAM" value={fmt(usMarketData.totalAddressableMarket)} icon={Target} subtitle="Digital health consumer" />
         <MetricCard label="SAM" value={fmt(usMarketData.serviceableMarket)} icon={Target} subtitle="Directly addressable" />
         <MetricCard label="WebMD Revenue" value={fmt(usMarketData.webmdRevenue)} icon={DollarSign} subtitle="Ad-heavy model" />
@@ -171,7 +171,7 @@ export default function USMarketPage() {
           <CardTitle>Priority US Partnership Targets</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div>
               <h4 className="text-sm font-semibold mb-2">Health Systems (Top 10)</h4>
               <div className="space-y-1 text-xs text-muted-foreground">

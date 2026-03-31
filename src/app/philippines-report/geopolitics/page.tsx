@@ -25,7 +25,7 @@ export default function GeopoliticsPage() {
             <div className="space-y-2">
               <h4 className="text-sm font-semibold">Enhanced Defense Cooperation Agreement (EDCA)</h4>
               <p className="text-xs text-muted-foreground">Expanded from 5 to <span className="font-semibold">9 agreed locations</span> in 2023. The new northern bases (Lal-lo, Santa Ana, Camp Melchor Dela Cruz) are positioned directly across from Taiwan, signaling their role in potential Taiwan contingency planning.</p>
-              <div className="grid grid-cols-3 gap-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
                 {["Antonio Bautista (Palawan)", "Basa Air Base (Pampanga)", "Fort Magsaysay (Nueva Ecija)", "Lumbia (Cagayan de Oro)", "Mactan-Benito Ebuen (Cebu)", "Lal-lo Airport (Cagayan)", "Camp Melchor (Isabela)", "Balabac Island (Palawan)", "Camilo Osias (Cagayan)"].map((b) => (
                   <Badge key={b} variant="outline" className="text-[9px] justify-center">{b}</Badge>
                 ))}
@@ -126,7 +126,7 @@ export default function GeopoliticsPage() {
         <CardContent className="space-y-4">
           <p className="text-sm text-muted-foreground">The Bangsamoro Autonomous Region (BARMM), created in 2019 after decades of armed conflict, is the Philippines&apos; greatest development challenge and opportunity.</p>
 
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <div className="bg-white rounded-lg p-3 border text-center">
               <p className="text-2xl font-mono font-bold text-red-600">37.2%</p>
               <p className="text-xs text-muted-foreground">Poverty rate (highest in PH)</p>
@@ -181,7 +181,7 @@ export default function GeopoliticsPage() {
           <p className="text-sm text-muted-foreground">
             The Philippines is the <span className="font-semibold">4th most climate-vulnerable nation</span> (Germanwatch). Climate is not an environmental issue — it is a national security and economic survival issue.
           </p>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="bg-white rounded-lg p-3 border text-center">
               <p className="text-lg font-mono font-bold">20/yr</p>
               <p className="text-xs text-muted-foreground">Typhoons enter PH area</p>
@@ -244,7 +244,7 @@ export default function GeopoliticsPage() {
       <Card className="border-primary bg-primary/5">
         <CardContent className="p-6 space-y-4">
           <h3 className="font-bold text-lg">How Technology Investment Creates Geopolitical Impact</h3>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { title: "Health Diplomacy as Soft Power", desc: "When 20M Filipinos use American health technology daily, it deepens the alliance more than military exercises. Health is the most trusted form of international engagement. A US health-tech company serving BARMM Muslim populations counters anti-American narratives globally." },
               { title: "BARMM Peace-Building", desc: "Health investment in Bangsamoro directly supports the peace dividend. When former conflict zones get AI health screening, it demonstrates that peace delivers tangible improvements. This reduces recruitment for extremist groups and validates the entire peace process." },

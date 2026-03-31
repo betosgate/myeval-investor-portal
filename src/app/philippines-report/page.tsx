@@ -49,7 +49,7 @@ export default function PhilippinesReportHome() {
       <Separator />
 
       {/* Key Stats */}
-      <div className="grid grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         <MetricCard label="GDP" value="$480B" subtitle="5.8% growth" icon={TrendingUp} />
         <MetricCard label="Population" value="117M" subtitle="Median age 25.7" icon={Users} />
         <MetricCard label="Credit Rating" value="BBB+" subtitle="Investment grade" icon={Shield} />
@@ -71,7 +71,7 @@ export default function PhilippinesReportHome() {
       {/* Section Grid */}
       <div className="space-y-4">
         <h2 className="text-xl font-bold">Report Sections</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {sections.map((s) => (
             <Link key={s.href} href={s.href} className="group">
               <Card className={`h-full bg-gradient-to-br ${s.color} transition-all duration-300 hover:shadow-md group-hover:scale-[1.01]`}>

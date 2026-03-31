@@ -252,7 +252,7 @@ export default function PolicyRecommendationsPage() {
           <p className="text-sm text-muted-foreground mb-3">
             The first 100 days must deliver visible, felt change to build political capital. These require only executive orders — no congressional approval. Do the popular things first.
           </p>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {firstHundredDays.map((eo, i) => (
               <div key={eo} className="text-xs bg-white border rounded-lg p-2 flex items-start gap-2">
                 <span className="font-mono text-primary font-bold shrink-0">{i + 1}.</span>
@@ -297,7 +297,7 @@ export default function PolicyRecommendationsPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               <div className="bg-green-50 rounded-lg p-3 border border-green-200">
                 <h4 className="text-xs font-semibold text-green-700 mb-1">Projected Impact</h4>
                 <p className="text-xs text-muted-foreground">{rec.projection}</p>
@@ -331,7 +331,7 @@ export default function PolicyRecommendationsPage() {
           <p className="text-sm text-muted-foreground">
             Total additional annual investment at steady state (Year 3): <span className="font-mono font-bold">PHP 495-665B/year (2.2-2.9% of GDP)</span>. Funded by:
           </p>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               { source: "Tax revenue growth from GDP expansion", amount: "PHP 100-150B" },
               { source: "Carbon tax", amount: "PHP 15-25B" },

@@ -35,7 +35,7 @@ export default function IntegrationStrategyPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Total Integrations" value={`${integrations.length}`} icon={Plug} />
         <MetricCard label="Priority 1 (Critical)" value={`${p1Count}`} icon={AlertTriangle} subtitle="Must complete first" />
         <MetricCard label="Countries" value={`${countries.length}`} icon={Building2} />
@@ -120,7 +120,7 @@ export default function IntegrationStrategyPage() {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-3 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div className="bg-muted/30 rounded-lg p-3">
                           <p className="text-xs text-muted-foreground">Timeline</p>
                           <p className="text-xs font-medium mt-1">{integration.timeline}</p>

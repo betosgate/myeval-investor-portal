@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -30,9 +31,15 @@ const navItems = [
 
 export function PhilippinesSidebar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-72 border-r border-border bg-white flex flex-col z-50">
+    <>
+      <button onClick={() => setOpen(!open)} className="lg:hidden fixed top-4 left-4 z-[60] h-10 w-10 rounded-lg bg-white border border-border flex items-center justify-center">
+        <span className="text-foreground text-lg">{open ? "\u2715" : "\u2630"}</span>
+      </button>
+      {open && <div className="lg:hidden fixed inset-0 bg-black/50 z-40" onClick={() => setOpen(false)} />}
+    <aside className={cn("fixed left-0 top-0 h-screen w-72 border-r border-border bg-white flex flex-col z-50 transition-transform lg:translate-x-0", open ? "translate-x-0" : "-translate-x-full")}>
       <div className="p-6">
         <Link href="/philippines-report" className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center">
@@ -54,6 +61,7 @@ export function PhilippinesSidebar() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setOpen(false)}
                 className={cn(
                   "flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm transition-colors",
                   isActive
@@ -85,5 +93,6 @@ export function PhilippinesSidebar() {
         </div>
       </div>
     </aside>
+    </>
   );
 }

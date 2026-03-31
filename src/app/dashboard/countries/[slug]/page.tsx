@@ -59,7 +59,7 @@ export default async function CountryPage({
       </div>
 
       {/* Key Stats */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         <MetricCard label="Population" value={fmtUsers(country.population)} icon={Users} />
         <MetricCard label="GDP/Capita" value={`$${country.gdpPerCapita.toLocaleString()}`} icon={DollarSign} />
         <MetricCard label="Health Spend/Cap" value={`$${country.healthSpendPerCapita}`} icon={TrendingUp} />
@@ -204,7 +204,7 @@ export default async function CountryPage({
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Regulatory */}
         <Card>
           <CardHeader>

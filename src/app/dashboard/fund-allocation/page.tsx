@@ -23,7 +23,7 @@ export default function FundAllocationPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <MetricCard label="Total Fund" value="$50M" icon={DollarSign} />
         <MetricCard label="Country Investment" value={fmt(totalCountryInvestment)} icon={Globe} subtitle="Across 8 markets" />
         <MetricCard label="Reserve" value="$7.5M" icon={Building2} subtitle="Working capital + contingency" />

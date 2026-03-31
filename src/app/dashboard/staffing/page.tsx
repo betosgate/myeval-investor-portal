@@ -24,7 +24,7 @@ export default function StaffingPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="US HQ Staff" value={`${totalCentralRoles}`} icon={Building2} subtitle="Central office roles" />
         <MetricCard label="Strategists" value="4" icon={Briefcase} subtitle="90-day engagement" />
         <MetricCard label="Travel Directors" value="2" icon={Plane} subtitle="Asia + LatAm" />

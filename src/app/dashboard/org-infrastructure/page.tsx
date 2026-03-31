@@ -27,7 +27,7 @@ export default function OrgInfrastructurePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Fund Close" value="April 1" subtitle="2026 — Day Zero" icon={Rocket} />
         <MetricCard label="Strategist Phase" value="90 Days" subtitle="April-July 2026" icon={CalendarClock} />
         <MetricCard label="Official Launch" value="August 1" subtitle="2026 — Execs in place" icon={Crown} />

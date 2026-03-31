@@ -45,7 +45,7 @@ export default function LandingPage() {
             <Zap className="h-3.5 w-3.5 text-blue-400" />
             <span className="text-xs text-muted-foreground">AI-Powered Health Intelligence Platform</span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
             Transforming Healthcare<br />
             <span className="bg-gradient-to-r from-teal-600 via-blue-600 to-teal-700 bg-clip-text text-transparent">
               Across 8 Nations
@@ -58,10 +58,10 @@ export default function LandingPage() {
         </div>
 
         {/* Two Big Cards */}
-        <div className="grid grid-cols-2 gap-8 w-full max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-5xl px-4 md:px-0">
           {/* Business Plan Card */}
           <Link href="/dashboard" className="group">
-            <div className="relative h-[420px] rounded-2xl border border-teal-200 bg-gradient-to-br from-teal-50 via-white to-transparent overflow-hidden transition-all duration-500 hover:border-teal-400 hover:shadow-[0_0_40px_-12px_rgba(20,184,166,0.2)] hover:scale-[1.02]">
+            <div className="relative h-auto min-h-[320px] md:h-[420px] rounded-2xl border border-teal-200 bg-gradient-to-br from-teal-50 via-white to-transparent overflow-hidden transition-all duration-500 hover:border-teal-400 hover:shadow-[0_0_40px_-12px_rgba(20,184,166,0.2)] hover:scale-[1.02]">
               {/* Card glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-teal-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -79,7 +79,7 @@ export default function LandingPage() {
                     The complete $50M global expansion strategy — financial projections, country-by-country market entry, staffing, org infrastructure, API integrations, outreach playbooks, and operational costs. 31 pages of actionable intelligence.
                   </p>
 
-                  <div className="grid grid-cols-4 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     {[
                       { icon: Globe, label: "8 Countries", sub: "+ US Market" },
                       { icon: TrendingUp, label: "$97.5M", sub: "Year 2 Revenue" },
@@ -105,7 +105,7 @@ export default function LandingPage() {
             rel="noopener noreferrer"
             className="group"
           >
-            <div className="relative h-[420px] rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-transparent overflow-hidden transition-all duration-500 hover:border-blue-400 hover:shadow-[0_0_40px_-12px_rgba(59,130,246,0.2)] hover:scale-[1.02]">
+            <div className="relative h-auto min-h-[320px] md:h-[420px] rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-transparent overflow-hidden transition-all duration-500 hover:border-blue-400 hover:shadow-[0_0_40px_-12px_rgba(59,130,246,0.2)] hover:scale-[1.02]">
               {/* Card glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -126,7 +126,7 @@ export default function LandingPage() {
                     The live MyEval.ai platform walkthrough — every role, every feature, every screen documented firsthand. 1,063 features across 9 specialized portals powered by Anthropic&apos;s Claude AI. See the product your investment funds.
                   </p>
 
-                  <div className="grid grid-cols-4 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     {[
                       { icon: Zap, label: "1,063", sub: "Features" },
                       { icon: Shield, label: "9 Portals", sub: "Every Stakeholder" },

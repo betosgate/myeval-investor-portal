@@ -162,7 +162,7 @@ export default function GovernancePage() {
           <CardTitle className="flex items-center gap-2"><Users className="h-5 w-5" />Key Performance Indicators</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="space-y-2">
               <h3 className="text-sm font-semibold">CEO Weekly Dashboard</h3>
               {["MRR and MRR growth rate", "Cash burn rate and runway", "New B2B deals in pipeline", "User growth (all countries)", "Revenue by country", "Customer NPS score", "Critical risk flag status"].map((k) => (

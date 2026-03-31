@@ -47,12 +47,12 @@ export default function PhilippinesEconomicOverview() {
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <TrendingUp className="h-6 w-6" /> Macroeconomic Snapshot
         </h2>
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           {macroIndicators.slice(0, 5).map((m) => (
             <MetricCard key={m.indicator} label={m.indicator} value={m.value} subtitle={m.detail} icon={DollarSign} />
           ))}
         </div>
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           {macroIndicators.slice(5).map((m) => (
             <MetricCard key={m.indicator} label={m.indicator} value={m.value} subtitle={m.detail} icon={TrendingUp} />
           ))}
@@ -124,7 +124,7 @@ export default function PhilippinesEconomicOverview() {
                   </p>
                 </div>
               ))}
-              <div className="grid grid-cols-3 gap-2 mt-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-3">
                 <div className="bg-muted/20 rounded p-2 text-center">
                   <p className="text-lg font-mono font-bold">{demographics.urbanization}%</p>
                   <p className="text-[10px] text-muted-foreground">Urban</p>
@@ -231,7 +231,7 @@ export default function PhilippinesEconomicOverview() {
           <Heart className="h-6 w-6" /> Healthcare Sector — Deep Dive
         </h2>
 
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           <MetricCard label="Market Size" value={fmt(healthcareDeepDive.totalMarketSize)} icon={DollarSign} subtitle={`${healthcareDeepDive.outOfPocketPct}% out-of-pocket`} />
           <MetricCard label="Doctors per 10K" value={healthcareDeepDive.physiciansPerK.toString()} icon={Heart} subtitle="WHO min: 10 per 10K" />
           <MetricCard label="Maternal Mortality" value={`${healthcareDeepDive.maternalMortality}/100K`} icon={Heart} subtitle="High for ASEAN" />
@@ -294,7 +294,7 @@ export default function PhilippinesEconomicOverview() {
         {/* Mental Health */}
         <Card className="border-purple-200 bg-purple-50/30">
           <CardHeader><CardTitle className="text-base flex items-center gap-2"><Brain className="h-4 w-4" /> Mental Health Crisis</CardTitle></CardHeader>
-          <CardContent className="grid grid-cols-4 gap-4">
+          <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white rounded-lg p-3 text-center border">
               <p className="text-2xl font-mono font-bold">{healthcareDeepDive.mentalHealth.psychiatrists}</p>
               <p className="text-xs text-muted-foreground">Total psychiatrists in PH</p>
@@ -379,7 +379,7 @@ export default function PhilippinesEconomicOverview() {
             <CardTitle className="text-base">How Technology Investment Creates Geopolitical Impact</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { title: "Health Diplomacy", desc: "Deploying AI health platforms builds US soft power. When 20M Filipinos use American health technology daily, it deepens the alliance more than any military exercise. Health is the most trusted form of international engagement." },
                 { title: "BARMM Peace-Building", desc: "Health investment in Bangsamoro directly supports the peace dividend. When former conflict zones get world-class AI health screening, it demonstrates that peace delivers tangible improvements. This reduces recruitment for extremist groups." },
@@ -585,7 +585,7 @@ export default function PhilippinesEconomicOverview() {
                 </div>
                 <div className="space-y-2">
                   <h3 className="font-bold">{item.title}</h3>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     <div className="bg-red-50 rounded-lg p-3 border border-red-100">
                       <h4 className="text-xs font-semibold text-red-700 mb-1">The Problem</h4>
                       <p className="text-xs text-muted-foreground">{item.problem}</p>

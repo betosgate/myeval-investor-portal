@@ -11,7 +11,7 @@ export default function ClimateResiliencePage() {
         <h1 className="text-3xl font-bold tracking-tight">Climate Resilience</h1>
         <p className="text-muted-foreground mt-2">4th most climate-vulnerable nation. 20 typhoons/year. $2.8B average annual damage. Manila sinking 10cm/decade. Climate is not an environmental issue — it is a survival issue.</p>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <MetricCard label="Annual Typhoons" value="20" subtitle="8-9 make landfall" icon={Cloud} />
         <MetricCard label="Annual Damage" value="$2.8B" subtitle="1-2% of GDP" icon={DollarSign} />
         <MetricCard label="Manila Sea Rise" value="2.6cm/yr" subtitle="+ land subsidence" icon={AlertTriangle} />
@@ -36,7 +36,7 @@ export default function ClimateResiliencePage() {
       </CardContent></Card>
       <Card className="border-primary bg-primary/5"><CardContent className="p-5">
         <h3 className="font-bold mb-2">Climate-Health Technology Nexus</h3>
-        <div className="grid grid-cols-3 gap-3 text-xs text-muted-foreground">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs text-muted-foreground">
           <div><h4 className="font-semibold text-foreground mb-1">Post-Disaster Health Surveillance</h4><p>Dengue, leptospirosis, waterborne diseases surge after typhoons. AI surveillance from health evaluations detects outbreaks within 72 hours vs weeks with traditional methods.</p></div>
           <div><h4 className="font-semibold text-foreground mb-1">Offline-Capable Health Platforms</h4><p>During typhoons, connectivity fails. Health platforms that work offline (mobile-first, satellite sync) are critical infrastructure — not nice-to-have but life-saving.</p></div>
           <div><h4 className="font-semibold text-foreground mb-1">Parametric Insurance</h4><p>AI-triggered insurance: when wind speed exceeds threshold, payout is automatic. No claims process. No delay. 98% of typhoon damage is currently uninsured.</p></div>

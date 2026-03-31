@@ -30,7 +30,7 @@ export default function RiskMatrixPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card><CardContent className="p-4 text-center"><p className="text-3xl font-bold text-red-400">3</p><p className="text-xs text-muted-foreground">Critical/Catastrophic</p></CardContent></Card>
         <Card><CardContent className="p-4 text-center"><p className="text-3xl font-bold text-yellow-400">6</p><p className="text-xs text-muted-foreground">High Impact</p></CardContent></Card>
         <Card><CardContent className="p-4 text-center"><p className="text-3xl font-bold text-orange-400">3</p><p className="text-xs text-muted-foreground">Medium Impact</p></CardContent></Card>
@@ -52,7 +52,7 @@ export default function RiskMatrixPage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <div className="grid grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 <div className="bg-muted/30 rounded-lg p-2">
                   <p className="text-xs text-muted-foreground">Probability</p>
                   <p className="text-sm font-medium">{r.probability}</p>

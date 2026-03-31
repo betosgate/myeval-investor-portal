@@ -21,7 +21,7 @@ export default function RevenuePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard label="Year 1 Revenue" value={fmt(totalYear1)} icon={DollarSign} />
         <MetricCard label="Year 2 Revenue" value={fmt(totalYear2)} icon={TrendingUp} trend={`+${Math.round(((totalYear2 - totalYear1) / totalYear1) * 100)}% YoY`} />
         <MetricCard label="Revenue Streams" value="9" subtitle="Diversified income" icon={DollarSign} />
