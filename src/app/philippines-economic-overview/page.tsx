@@ -608,6 +608,101 @@ export default function PhilippinesEconomicOverview() {
 
       <Separator />
 
+      {/* Global Economic Models for Philippine Transformation */}
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold flex items-center gap-2">
+          <Landmark className="h-6 w-6" /> Global Economic Models for Philippine Transformation
+        </h2>
+        <p className="text-sm text-muted-foreground">
+          Six proven national transformation models from around the world — adapted for the Philippines context. Each offers a specific, actionable pathway to address the country&apos;s core challenges.
+        </p>
+
+        {[
+          {
+            model: "Norway — Sovereign Wealth Fund",
+            flag: "NO",
+            color: "border-blue-300 bg-blue-50/50",
+            original: "Norway established the Government Pension Fund Global in 1990 using North Sea oil revenues. Today it holds $1.7T+ — making every Norwegian a millionaire on paper. The 'fiscal rule' spends only the expected real return (~3%/year), preserving principal for future generations. This transformed Norway from a resource-dependent economy to the world's wealthiest per-capita nation.",
+            philippineApplication: "The Philippines sits on $1T+ in untapped mineral reserves (nickel — world's 2nd largest producer, gold, copper, chromite) plus the Reed Bank gas reserves (5.4B barrels oil equivalent, blocked by the China dispute). Geothermal energy generates $500M+/year. The Marcos Jr. administration created the Maharlika Investment Fund (RA 11954, 2023) but it was criticized for using pension funds as seed capital rather than resource revenues. A properly structured Philippine SWF funded by: (1) mining royalties restructured to 10-15% of gross output, (2) Reed Bank gas revenues once the territorial dispute resolves, (3) PAGCOR gaming revenues ($800M+/year), and (4) a 1% OFW remittance voluntary contribution could accumulate $50-80B over 20 years.",
+            healthImpact: "A Philippine SWF could allocate 5-10% of annual returns to a National Health Endowment — funding AI-powered health screening, hospital construction in underserved regions, and healthcare worker retention bonuses that reduce brain drain. Norway's fund spends $40B+/year on public services. Even a Philippine fund 1/20th the size would transform health financing.",
+            feasibility: "High political feasibility — Maharlika already passed. Needs restructuring: (1) shift seed capital from pension funds to actual resource revenues, (2) establish independent governance board (not political appointees), (3) legislate the fiscal rule, (4) mandate transparency (Norway publishes every investment).",
+          },
+          {
+            model: "Singapore — Strategic Industrial Transformation",
+            flag: "SG",
+            color: "border-green-300 bg-green-50/50",
+            original: "Singapore's Economic Development Board (EDB) systematically identified and attracted strategic industries: electronics (1970s), IT services (1980s), biotech (1990s), fintech (2010s). Temasek Holdings ($400B+) and GIC ($800B+) invest globally. Result: GDP per capita went from $500 (1965) to $65,000 (2025).",
+            philippineApplication: "The Philippines has the foundation — BPO ($32.5B) proves the country can build a world-class services industry. Apply the Singapore model: (1) Create a 'Philippine Digital Health Board' modeled on EDB that actively recruits health-tech companies to establish regional HQs in the Philippines, (2) Designate BGC/Clark as a 'Health-Tech Special Economic Zone' with tax holidays, fast-track permits, and 100% foreign ownership, (3) Use the BPO talent pipeline to feed the health-tech sector — the same English-speaking, tech-savvy workforce that powers BPO can power health technology operations for the world.",
+            healthImpact: "Position the Philippines as the 'Health-Tech Hub of ASEAN' — the place where AI health companies establish operations to serve 680M ASEAN consumers. This creates thousands of high-value health-tech jobs (competing with emigration salaries) while building domestic health capacity. MyEval.ai establishing Philippine operations is a proof of concept.",
+            feasibility: "Moderate — requires political will to create institutional focus. The Philippines already has PEZA, BOI, and the Innovative Startup Act framework. The gap is strategic coherence, not tools. A president who champions 'Philippines as Health-Tech Hub' could catalyze this within one term.",
+          },
+          {
+            model: "South Korea — Education-Led Industrial Leap",
+            flag: "KR",
+            color: "border-purple-300 bg-purple-50/50",
+            original: "Korea invested 6-8% of GDP in education for decades, producing the world's most educated workforce. Combined with government-backed industrial conglomerates (Samsung, Hyundai, LG), this created an export powerhouse. GDP per capita went from $100 (1960) to $35,000 (2025). Korea now ranks #1-3 globally in PISA scores.",
+            philippineApplication: "The Philippines ranks 77th/81 in PISA. This is the country's deepest structural weakness. Korea's lesson: triple education spending from 3.5% to 7-8% of GDP, focus on STEM and vocational training, and create a 'Filipino Samsung' in health technology by concentrating government support on Philippine conglomerates (Ayala, SM, Metro Pacific) to build world-class health-tech products for export. TESDA can be transformed into a Korean-style vocational powerhouse if properly funded.",
+            healthImpact: "Better-educated citizens make better health decisions. Korea's education investment directly drove its healthcare outcomes (life expectancy 84 years, among highest globally). AI health platforms like MyEval.ai become more effective when users are health-literate. Education + health technology is a virtuous cycle.",
+            feasibility: "Long-term (10-20 years for education transformation). Politically difficult — requires sustained spending increases across multiple administrations. But the Korean example proves it works even for countries starting from extreme poverty.",
+          },
+          {
+            model: "Rwanda — Technology-First Leapfrog",
+            flag: "RW",
+            color: "border-teal-300 bg-teal-50/50",
+            original: "Rwanda — recovering from genocide (1994) — leapfrogged traditional development by going digital-first. Community-based health insurance (Mutuelle de Santé) covers 91% of the population at ~$3/person/year. Zipline drone delivery brings blood and medicine to rural clinics. Digital government services eliminate corruption touchpoints. Life expectancy went from 28 (1994) to 69 (2025).",
+            philippineApplication: "The Philippines can leapfrog its infrastructure deficit the same way. Instead of building thousands of clinics (takes decades, costs billions), deploy AI health screening on the 80M+ smartphones that already exist. Instead of training 40,000 more doctors (takes 10+ years), use AI to multiply the capacity of the 40,000 doctors already here. Rwanda proved that a poor country can achieve near-universal health coverage through technology + community health workers. The Philippines has 97,000 barangay health workers — equip them with AI screening tools and you've built a distributed health system overnight.",
+            healthImpact: "Direct application: MyEval.ai deployed through barangay health workers using the Rwanda community health model could screen 20-30M Filipinos within 2 years — far faster and cheaper than building hospitals. Community-based AI health screening at the barangay level is the Philippine version of Rwanda's Mutuelle de Santé. Cost: $2-3 per person screened vs $200+ per clinic visit.",
+            feasibility: "High — this doesn't require constitutional change or massive capital investment. It requires: (1) DOH policy decision to deploy AI tools through existing barangay health workers, (2) PhilHealth to cover AI-assisted screening as a reimbursable service, (3) DICT to ensure connectivity. Can be piloted in one province within 6 months.",
+          },
+          {
+            model: "India — Digital Public Infrastructure (Aadhaar + UPI)",
+            flag: "IN",
+            color: "border-orange-300 bg-orange-50/50",
+            original: "India built three layers of digital public infrastructure: Aadhaar (1.4B biometric IDs), UPI (real-time payments — $2T+/year in transactions), and Account Aggregator (data sharing with consent). Together called 'India Stack,' this enables everything from instant bank accounts to direct welfare payments that bypass corruption. UPI alone processes more transactions than Visa and Mastercard combined.",
+            philippineApplication: "The Philippines has the building blocks: PhilSys National ID (~80M registered), GCash/Maya (100M+ combined wallets), and PhilHealth (universal enrollment). What's missing is the INTEROPERABILITY layer — making these systems talk to each other. Build 'Philippine Stack': (1) Complete PhilSys rollout (100% coverage), (2) Create a PhilHealth API that connects to GCash/Maya for instant claims payment, (3) Build a Health Data Exchange (like India's ABDM) where patients own their health records and grant access via consent. This eliminates the biggest friction in Philippine healthcare: payment delays, paper records, and administrative waste.",
+            healthImpact: "A Filipino patient uses MyEval.ai for an AI health evaluation → result is stored in their Philippine Health Data Exchange profile → PhilHealth automatically processes the claim via GCash → the patient pays zero out-of-pocket. This is the end state. India proved it works at 1.4B scale. The Philippines at 117M is entirely achievable within 3-5 years.",
+            feasibility: "Moderate-High — the pieces exist but need integration. DICT and BSP are both pushing digital interoperability. PhilHealth digital transformation is underway. The gap is political coordination across agencies. A presidential directive could accelerate this dramatically.",
+          },
+          {
+            model: "Costa Rica — Invest in People, Not Military",
+            flag: "CR",
+            color: "border-yellow-300 bg-yellow-50/50",
+            original: "Costa Rica abolished its military in 1948 and redirected military spending to education and healthcare. Result: life expectancy 81 years (higher than the US), 99% literacy, universal healthcare, and the highest HDI in Central America. Healthcare spending is 7.6% of GDP with universal coverage through the Caja Costarricense de Seguro Social (CCSS).",
+            philippineApplication: "The Philippines spends ~1.5% of GDP on defense ($6.5B). Reallocating even 20% of this (~$1.3B/year) to healthcare would more than double the public health budget for primary care. While full military abolition is unrealistic given the South China Sea situation, the Costa Rica model demonstrates that health investment has a higher return on national security than military spending — healthy populations are stable populations. The BARMM peace dividend could redirect conflict-related spending to health infrastructure in Mindanao.",
+            healthImpact: "An additional $1.3B/year in health spending could: fund 10,000 new community health workers ($3,000/year each = $30M), build 200 new rural health units ($500K each = $100M), deploy AI health screening nationally ($50M), increase PhilHealth benefits to reduce out-of-pocket spending ($500M+), and fund healthcare worker retention bonuses ($200M+). This alone would transform Philippine health outcomes within one presidential term.",
+            feasibility: "Low for full military reallocation (geopolitically impossible). Medium for partial reallocation (20-30%). High for the BARMM-specific version (redirecting conflict spending to health). The argument to make: every peso spent on health in BARMM prevents ten pesos in future conflict costs.",
+          },
+        ].map((model) => (
+          <Card key={model.model} className={model.color}>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg">{model.model}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">The Original Model</h4>
+                <p className="text-sm text-muted-foreground">{model.original}</p>
+              </div>
+              <div className="bg-white/80 rounded-lg p-4 border">
+                <h4 className="text-xs font-semibold uppercase tracking-wider mb-1 text-primary">Applied to the Philippines</h4>
+                <p className="text-sm text-muted-foreground">{model.philippineApplication}</p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-green-50 rounded-lg p-3 border border-green-200">
+                  <h4 className="text-xs font-semibold text-green-700 mb-1">Health Technology Impact</h4>
+                  <p className="text-xs text-muted-foreground">{model.healthImpact}</p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+                  <h4 className="text-xs font-semibold text-blue-700 mb-1">Political Feasibility</h4>
+                  <p className="text-xs text-muted-foreground">{model.feasibility}</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      <Separator />
+
       {/* The Bottom Line */}
       <Card className="border-primary bg-primary/5">
         <CardContent className="p-8 text-center space-y-4">
