@@ -1,0 +1,233 @@
+// Philippines Economic Overview — Independent Research View
+// Data sources: World Bank, IMF, PSA, BSP, WHO, UNDP
+
+export const gdpTimeline = [
+  { year: "2018", gdpBn: 347, growthPct: 6.3 },
+  { year: "2019", gdpBn: 377, growthPct: 6.1 },
+  { year: "2020", gdpBn: 362, growthPct: -9.5 },
+  { year: "2021", gdpBn: 394, growthPct: 5.7 },
+  { year: "2022", gdpBn: 404, growthPct: 7.6 },
+  { year: "2023", gdpBn: 437, growthPct: 5.6 },
+  { year: "2024", gdpBn: 456, growthPct: 5.8 },
+  { year: "2025E", gdpBn: 480, growthPct: 6.1 },
+  { year: "2026P", gdpBn: 510, growthPct: 6.3 },
+];
+
+export const gdpBySector = [
+  { sector: "Services", pct: 61.4, details: "BPO/IT-BPM, trade, finance, real estate, tourism" },
+  { sector: "Industry", pct: 28.8, details: "Manufacturing, construction, mining, utilities" },
+  { sector: "Agriculture", pct: 9.8, details: "Rice, coconut, banana, fisheries, livestock" },
+];
+
+export const macroIndicators = [
+  { indicator: "Population", value: "117M", detail: "3rd largest ASEAN economy by population" },
+  { indicator: "GDP per Capita (Nominal)", value: "$3,905", detail: "Lower-middle income, growing 5-6% annually" },
+  { indicator: "GDP per Capita (PPP)", value: "$10,900", detail: "Purchasing power higher than nominal suggests" },
+  { indicator: "Inflation Rate", value: "3.7%", detail: "Within BSP target band of 2-4%" },
+  { indicator: "Unemployment", value: "4.3%", detail: "Underemployment ~14% is the real issue" },
+  { indicator: "National Debt / GDP", value: "60.2%", detail: "Manageable but elevated post-COVID" },
+  { indicator: "Credit Rating", value: "BBB+ (S&P, Fitch)", detail: "Investment grade since 2013" },
+  { indicator: "Foreign Reserves", value: "$106B", detail: "~7.5 months of import cover" },
+  { indicator: "OFW Remittances", value: "$36.1B/year", detail: "9.4% of GDP — economic lifeline" },
+  { indicator: "FDI Inflow", value: "$9.2B (2024)", detail: "Growing but trails Vietnam and Thailand" },
+];
+
+export const demographics = {
+  ageGroups: [
+    { group: "0-14 (Youth)", pct: 30.2, millions: 35.3 },
+    { group: "15-24 (Young Adult)", pct: 19.1, millions: 22.3 },
+    { group: "25-54 (Working Age)", pct: 37.2, millions: 43.5 },
+    { group: "55-64", pct: 7.8, millions: 9.1 },
+    { group: "65+ (Elderly)", pct: 5.7, millions: 6.7 },
+  ],
+  islandGroups: [
+    { region: "Luzon", population: 64_500_000, pctGdp: 72 },
+    { region: "Visayas", population: 20_800_000, pctGdp: 14 },
+    { region: "Mindanao", population: 27_400_000, pctGdp: 14 },
+  ],
+  urbanization: 48.3,
+  medianAge: 25.7,
+  literacyRate: 96.3,
+  middleClassPct: 28,
+};
+
+export const keySectors = [
+  {
+    name: "BPO / IT-Business Process Management",
+    size: "$32.5B revenue (2024)",
+    employment: "1.7M direct, 4.5M indirect",
+    growth: "8-10% annually",
+    keyPlayers: ["Accenture", "Concentrix", "TDCX", "TaskUs", "Teleperformance"],
+    challenges: ["AI automation threat to voice-based BPO", "Rising wage costs vs India/Vietnam", "Work-from-home infrastructure gaps", "Talent pipeline sustainability"],
+    opportunities: ["Shift to higher-value services (analytics, AI training, digital marketing)", "Healthcare BPO growth", "Creative services and design", "AI-augmented workforce (not replaced)"],
+    impactScore: 9,
+  },
+  {
+    name: "OFW Remittances Economy",
+    size: "$36.1B annually (9.4% of GDP)",
+    employment: "10M+ OFWs deployed globally",
+    growth: "3-5% annually",
+    keyPlayers: ["Western Union", "Wise", "GCash Remit", "Bayad", "Cebuana Lhuillier"],
+    challenges: ["Dependency risk (brain drain of skilled workers)", "OFW family separation and mental health", "Automation reducing demand for manual labor abroad", "Geopolitical risks in Gulf states"],
+    opportunities: ["Fintech for remittance optimization", "OFW family health/education services", "Investment platforms for OFW savings", "Return migration programs for skilled OFWs"],
+    impactScore: 8,
+  },
+  {
+    name: "Healthcare",
+    size: "$21B total expenditure (4.7% of GDP)",
+    employment: "850K+ healthcare workers (significant emigration)",
+    growth: "8-12% annually",
+    keyPlayers: ["Metro Pacific Hospitals", "St. Luke's", "The Medical City", "PhilHealth", "Intellicare"],
+    challenges: ["1.2 physicians per 10,000 (WHO minimum: 10)", "54% out-of-pocket despite UHC Act", "65% of hospitals in NCR — massive regional gaps", "Nurse/doctor emigration (60,000+ leave annually)", "Mental health: 1 psychiatrist per 200,000 people"],
+    opportunities: ["AI-powered health screening fills doctor shortage gap", "Digital health platforms for remote areas", "PhilHealth digital transformation", "OFW family telehealth", "Mental health tech"],
+    impactScore: 10,
+  },
+  {
+    name: "Digital Economy / E-Commerce",
+    size: "$28B internet economy (2025, Google/Temasek/Bain)",
+    employment: "Growing rapidly — 500K+ in tech sector",
+    growth: "20-25% annually",
+    keyPlayers: ["GCash (60M+ users)", "Maya (40M+)", "Shopee PH", "Lazada PH", "Grab PH"],
+    challenges: ["Digital divide (rural areas lag)", "Logistics last-mile delivery", "Cybersecurity maturity", "Regulatory catch-up with fintech growth"],
+    opportunities: ["2nd largest internet economy in SEA by 2030", "Financial inclusion via digital wallets", "Digital health and insurance", "AgriTech for 5.6M farming families"],
+    impactScore: 9,
+  },
+  {
+    name: "Infrastructure",
+    size: "$23B annual public infra spending (2024)",
+    employment: "4.2M construction workers",
+    growth: "12-15% annually (Build Better More program)",
+    keyPlayers: ["San Miguel Corp", "Metro Pacific (MVP Group)", "Ayala Corp", "DMCI Holdings", "Megawide Construction"],
+    challenges: ["Metro Manila traffic costs $67M/day in lost productivity", "NAIA airport at 150% capacity", "Only 79km of urban rail for 14M Metro Manila population", "Provincial roads and bridges deficit", "Climate-resilient infrastructure needed"],
+    opportunities: ["New Manila International Airport (Bulacan — San Miguel)", "North-South Commuter Railway (PHP 777B)", "Cebu-Mactan bridge projects", "Mindanao Railway", "PPP models for investors"],
+    impactScore: 8,
+  },
+  {
+    name: "Agriculture",
+    size: "9.8% of GDP but employs 24% of workforce",
+    employment: "10.9M workers (lowest productivity sector)",
+    growth: "1-2% (stagnant)",
+    keyPlayers: ["NFA (National Food Authority)", "DA (Dept of Agriculture)", "SM Group (food processing)", "Universal Robina Corp"],
+    challenges: ["Rice imports despite being a rice-growing nation", "Typhoon damage ($1-3B/year)", "Fragmented land ownership", "Low mechanization (only 2.5 HP/hectare vs 4+ in Vietnam)", "Climate change threatening yields"],
+    opportunities: ["AgriTech for yield optimization", "Post-harvest loss reduction (30-40% of produce lost)", "Aquaculture tech (Philippines is 4th largest fish producer)", "Coconut industry modernization", "Precision agriculture and weather AI"],
+    impactScore: 7,
+  },
+  {
+    name: "Tourism",
+    size: "$22B (2024, 7.7M international arrivals)",
+    employment: "5.7M direct and indirect",
+    growth: "15-20% recovery trajectory",
+    keyPlayers: ["DOT", "Cebu Pacific", "Philippine Airlines", "Ayala Land Hotels", "SM Hotels"],
+    challenges: ["Infrastructure gaps at tourist destinations", "Environmental degradation (Boracay closure precedent)", "Visa processing delays", "Competition from Thailand and Vietnam"],
+    opportunities: ["Medical tourism ($500M+ potential)", "Ecotourism in Palawan, Siargao", "MICE (meetings/conventions)", "Digital nomad visas"],
+    impactScore: 6,
+  },
+  {
+    name: "Financial Services & Fintech",
+    size: "$3.8B fintech market (2024)",
+    employment: "850K+ in banking/finance",
+    growth: "25-30% fintech growth",
+    keyPlayers: ["GCash/Mynt", "Maya (Voyager)", "UnionBank", "BDO Unibank", "BPI", "Tonik (digital bank)", "GoTyme"],
+    challenges: ["44% of adults still unbanked or underbanked", "Rural financial access gaps", "Regulatory balance (innovation vs protection)", "Fraud and cybersecurity"],
+    opportunities: ["Digital banking licenses (6 granted by BSP)", "Micro-insurance via digital wallets", "Lending to MSMEs (99% of businesses)", "Cross-border payments for OFWs", "AI credit scoring for unbanked"],
+    impactScore: 8,
+  },
+  {
+    name: "Education",
+    size: "$14B total spending (public + private, 3.5% of GDP)",
+    employment: "1.1M teachers",
+    growth: "5-7% annually",
+    keyPlayers: ["DepEd", "CHED", "TESDA", "AMA University system", "Mapua University"],
+    challenges: ["PISA 2022: Philippines ranked 77th of 81 in math, 76th in reading", "Classroom shortage: 91,000 classrooms needed", "Teacher quality and compensation", "Learning loss from COVID (2 years of school closures)", "Skills mismatch with industry needs"],
+    opportunities: ["EdTech for supplemental learning", "TESDA digital skills training", "AI-powered personalized learning", "BPO-education pipeline programs", "International education services"],
+    impactScore: 7,
+  },
+  {
+    name: "Energy",
+    size: "$25B power sector",
+    employment: "120K+ direct",
+    growth: "6-8% demand growth annually",
+    keyPlayers: ["Aboitiz Power", "First Gen (Lopez Group)", "San Miguel Global Power", "Meralco (distribution)", "NGCP (transmission)"],
+    challenges: ["Highest electricity costs in ASEAN ($0.18-0.22/kWh)", "Coal dependency (47% of generation mix)", "Mindanao power supply deficit", "Renewable energy targets behind schedule"],
+    opportunities: ["Solar/wind (RE Act mandates 35% by 2030)", "Battery storage", "Mini-grid solutions for islands", "Green energy certificates", "Nuclear energy exploration (government studying)"],
+    impactScore: 7,
+  },
+];
+
+export const challenges = [
+  { name: "Poverty & Inequality", severity: "Critical", metric: "18.1% poverty rate; BARMM at 37.2% vs NCR at 2.5%", detail: "Despite economic growth, poverty remains entrenched in Mindanao and Eastern Visayas. The Gini coefficient of 0.423 indicates high inequality. The poorest 20% earn only 5.3% of national income while the richest 20% earn 52%.", solutions: "4Ps cash transfer program (4.4M households), but graduation rates are low. Need: skills training integration with cash transfers, digital financial inclusion, rural economic development, agrarian reform completion." },
+  { name: "Healthcare Access", severity: "Critical", metric: "1.2 doctors per 10K; 54% out-of-pocket spending", detail: "The Philippines has one of the worst doctor-to-population ratios in ASEAN. 60,000+ nurses and doctors leave annually. PhilHealth UHC implementation is behind schedule. Regions outside NCR face severe healthcare deserts.", solutions: "AI and digital health can multiply the capacity of existing health workers. Telemedicine bridges geographic gaps. PhilHealth digital claims can improve efficiency. Need: retention incentives for healthcare workers, medical school expansion, community health worker programs." },
+  { name: "Education Quality", severity: "High", metric: "PISA 2022: 77th/81 math, 76th/81 reading", detail: "Philippines ranked near the bottom globally on PISA standardized tests. 91,000 classroom shortage. 2 years of pandemic school closures created massive learning loss. Teacher salaries average PHP 27,000/month ($470) — the lowest in ASEAN.", solutions: "EdTech supplemental learning platforms, teacher training investment, TESDA reskilling programs, public-private partnerships for school infrastructure. Need: 3-5x increase in per-student spending." },
+  { name: "Infrastructure Deficit", severity: "High", metric: "Metro Manila traffic costs $67M/day ($24.5B/year)", detail: "Philippines spends only 5.3% of GDP on infrastructure (target: 6-7%). NAIA airport is at 150% capacity. Only 79km of urban rail serves 14M people in Metro Manila. Provincial connectivity remains poor — many islands accessible only by boat.", solutions: "Build Better More program ($173B pipeline). New Manila airport (2027). North-South Commuter Railway. PPP models attracting private capital. Need: faster execution, reduced corruption in procurement, climate-resilient design." },
+  { name: "Climate Vulnerability", severity: "High", metric: "Avg 20 typhoons/year; $2.8B annual damage", detail: "Philippines is the 4th most climate-vulnerable country globally (Germanwatch CRI). Typhoon damage averages $2.8B/year and is increasing. Manila Bay faces sea level rise of 3-4mm/year. Agriculture losses from climate events threaten food security.", solutions: "Climate-resilient infrastructure, parametric insurance, early warning AI systems, mangrove restoration, agricultural adaptation. Need: $5-8B annually in climate adaptation investment (currently $1.5B)." },
+  { name: "Digital Divide", severity: "Medium-High", metric: "NCR 92% internet vs BARMM 38%", detail: "While Metro Manila is highly connected, rural and island areas lag significantly. Fixed broadband penetration is only 11% (vs 35% in Thailand). Mobile data costs consume 6% of average monthly income for bottom 40%.", solutions: "DICT broadband plan, free public wifi (21,000+ sites deployed), telco tower sharing, satellite internet (Starlink launched PH service 2024). Need: last-mile connectivity investment, affordable data packages." },
+  { name: "Corruption", severity: "Medium-High", metric: "Transparency International CPI: 34/100 (rank 115/180)", detail: "Corruption remains embedded in government procurement, regulatory approvals, and land titling. The Marcos Jr administration has made anti-corruption pledges but enforcement is inconsistent.", solutions: "Digital government services (reducing face-to-face interaction), procurement transparency platforms, whistleblower protection, independent judiciary strengthening." },
+  { name: "Housing Deficit", severity: "Medium", metric: "6.5M housing backlog", detail: "Rapid urbanization has created massive informal settlements (4-5M in Metro Manila alone). Social housing programs build 100-200K units/year against a 6.5M deficit. Housing costs in Metro Manila have risen 40% since 2019.", solutions: "Mass housing programs (Pag-IBIG Fund, NHA), modular construction technology, transit-oriented development, rental housing innovation. Need: 10x current social housing output." },
+];
+
+export const healthcareDeepDive = {
+  totalMarketSize: 21_000_000_000,
+  publicSpendPct: 46,
+  privateSpendPct: 54,
+  outOfPocketPct: 54,
+  physiciansPerK: 1.2,
+  nursesPerK: 5.8,
+  hospitalBedsPer10K: 10,
+  lifeExpectancy: 72.1,
+  infantMortality: 20.2,
+  maternalMortality: 121,
+  topCauses: [
+    { cause: "Ischemic heart disease", deaths: 98_000, pctTotal: 17.3 },
+    { cause: "Stroke", deaths: 68_000, pctTotal: 12.0 },
+    { cause: "Diabetes", deaths: 38_000, pctTotal: 6.7 },
+    { cause: "Lower respiratory infections", deaths: 35_000, pctTotal: 6.2 },
+    { cause: "Tuberculosis", deaths: 26_000, pctTotal: 4.6 },
+    { cause: "Cancer (all types)", deaths: 73_000, pctTotal: 12.9 },
+    { cause: "Kidney disease", deaths: 22_000, pctTotal: 3.9 },
+    { cause: "Road injuries", deaths: 12_000, pctTotal: 2.1 },
+    { cause: "Neonatal disorders", deaths: 18_000, pctTotal: 3.2 },
+    { cause: "COPD", deaths: 15_000, pctTotal: 2.6 },
+  ],
+  regionalDisparities: [
+    { region: "NCR (Metro Manila)", physPer10K: 3.5, bedsPer10K: 18, povertyPct: 2.5 },
+    { region: "CALABARZON", physPer10K: 1.8, bedsPer10K: 12, povertyPct: 8.2 },
+    { region: "Central Visayas", physPer10K: 1.5, bedsPer10K: 11, povertyPct: 18.5 },
+    { region: "Davao Region", physPer10K: 1.3, bedsPer10K: 9, povertyPct: 16.8 },
+    { region: "Eastern Visayas", physPer10K: 0.6, bedsPer10K: 5, povertyPct: 28.1 },
+    { region: "BARMM", physPer10K: 0.3, bedsPer10K: 3, povertyPct: 37.2 },
+  ],
+  mentalHealth: {
+    psychiatrists: 600,
+    ratio: "1 per 200,000 people",
+    affectedPopulation: 3_600_000,
+    treatmentGap: "97% — only 3% receive any treatment",
+    suicideRate: 3.2,
+  },
+  workerEmigration: {
+    annualDepartures: 60_000,
+    topDestinations: ["USA", "UK", "Saudi Arabia", "UAE", "Canada"],
+    nurseShortage: 127_000,
+    doctorShortage: 40_000,
+  },
+};
+
+export const aseanComparison = [
+  { country: "Philippines", gdpPerCapita: 3905, growth: 5.8, fdi: 9.2, internet: 73, healthSpend: 180, hdi: 0.710, corruption: 34 },
+  { country: "Vietnam", gdpPerCapita: 4300, growth: 6.5, fdi: 18.5, internet: 79, healthSpend: 230, hdi: 0.726, corruption: 42 },
+  { country: "Thailand", gdpPerCapita: 7800, growth: 3.2, fdi: 10.8, internet: 88, healthSpend: 300, hdi: 0.800, corruption: 36 },
+  { country: "Indonesia", gdpPerCapita: 4920, growth: 5.1, fdi: 22.0, internet: 66, healthSpend: 150, hdi: 0.713, corruption: 34 },
+  { country: "Malaysia", gdpPerCapita: 12500, growth: 4.8, fdi: 12.5, internet: 96, healthSpend: 490, hdi: 0.803, corruption: 50 },
+];
+
+export const investmentOpportunities = [
+  { rank: 1, sector: "Digital Health & AI Diagnostics", marketSize: "$2.5B addressable", growth: "25-35%", gap: "Zero AI health evaluation tools exist. 1.2 doctors per 10K. 60K healthcare workers emigrate annually. AI can multiply remaining workforce capacity by 5-10x.", whyNow: "UHC Act mandates digital health adoption. PhilHealth digitizing claims. COVID proved telehealth works. 73% internet penetration enables mobile health." },
+  { rank: 2, sector: "Fintech / Financial Inclusion", marketSize: "$3.8B fintech, $15B addressable", growth: "25-30%", gap: "44% unbanked. Rural financial access near zero. MSMEs (99% of businesses) lack credit access. Cross-border payments for 10M OFWs are expensive.", whyNow: "GCash hit 60M users. BSP issued 6 digital bank licenses. Open Finance Framework launching. Mobile payments grew 400% since 2020." },
+  { rank: 3, sector: "EdTech & Skills Training", marketSize: "$800M digital, $14B total education", growth: "20-25%", gap: "PISA scores near global bottom. 91K classroom shortage. 2 years of learning loss. BPO needs 300K new workers/year but skills mismatch is severe.", whyNow: "Free WiFi in 21K public spaces. DepEd adopting blended learning. TESDA digitizing technical training. Smartphone penetration among students is 80%+." },
+  { rank: 4, sector: "AgriTech & Food Security", marketSize: "$1.2B addressable", growth: "15-20%", gap: "30-40% post-harvest losses. Lowest farm mechanization in ASEAN. Rice import dependency despite arable land. 5.6M farming families earning $3/day average.", whyNow: "Rice Tariffication Law freed $3B in tariff revenue for farm investment. DA Digital Agriculture roadmap. Climate pressure demands precision farming." },
+  { rank: 5, sector: "Climate Tech & Resilience", marketSize: "$3B adaptation needed annually", growth: "30%+", gap: "$2.8B annual typhoon damage. Insurance penetration only 2.7%. 40% of GDP at climate risk. Manila Bay sinking 10cm/decade.", whyNow: "Green bond market growing. Climate Finance Act proposed. International climate funds targeting PH. Parametric insurance technology maturing." },
+  { rank: 6, sector: "Infrastructure / PPP", marketSize: "$173B pipeline (Build Better More)", growth: "12-15%", gap: "$67M/day traffic losses. Airport at 150% capacity. 79km rail for 14M people. Inter-island connectivity poor.", whyNow: "New Manila airport breaking ground. NSCR rail construction underway. PPP Act amended for better private sector terms. Record infra budget." },
+  { rank: 7, sector: "Renewable Energy", marketSize: "$5B investment pipeline", growth: "15-20%", gap: "Highest electricity costs in ASEAN. 47% coal dependency. RE Act target 35% by 2030. Off-grid islands need solutions.", whyNow: "RE Act raised foreign ownership cap to 100% for RE. Solar costs fell 80% in decade. LNG transition creating investment windows. Green Energy Option Program active." },
+  { rank: 8, sector: "BPO Transformation / AI Services", marketSize: "$32.5B and growing", growth: "8-10%", gap: "Voice BPO facing AI disruption. Need to move up value chain. 1.7M workers need reskilling. Philippine advantage in creative/complex services.", whyNow: "AI augmentation (not replacement) is the narrative. Philippines English proficiency + cultural affinity = AI training data gold. Healthcare BPO fastest growing subsector." },
+  { rank: 9, sector: "Housing & PropTech", marketSize: "$15B annual housing construction", growth: "10-12%", gap: "6.5M unit housing backlog. Social housing output 10x below need. Construction tech still traditional. Rental market undeveloped.", whyNow: "Pag-IBIG Fund record lending. Modular construction technology maturing. PropTech startups emerging (Hoppler, Lamudi). Transit-oriented development near new rail." },
+  { rank: 10, sector: "InsurTech & Micro-Insurance", marketSize: "$1.5B premiums, $10B addressable", growth: "20-25%", gap: "Insurance penetration 2.7% (vs 5% Thailand, 9% Malaysia). Only 16% of Filipinos have any life insurance. Climate risk uninsured. Health insurance gaps despite PhilHealth.", whyNow: "GCash/Maya enabling micro-insurance distribution. Insurance Commission digital framework. Parametric insurance for typhoons proven. Embedded insurance in e-commerce growing." },
+];
