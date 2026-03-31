@@ -25,12 +25,14 @@ import {
   Radio,
   Network,
   ClipboardList,
+  HandHeart,
 } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
 const navItems = [
   { href: "/dashboard", label: "Executive Summary", icon: LayoutDashboard },
+  { href: "/dashboard/humanitarian-impact", label: "Humanitarian Impact", icon: HandHeart },
   { href: "/dashboard/countries", label: "Global Markets", icon: Globe },
   { href: "/dashboard/countries/vietnam", label: "Vietnam", icon: MapPin, indent: true },
   { href: "/dashboard/countries/india", label: "India", icon: MapPin, indent: true },
