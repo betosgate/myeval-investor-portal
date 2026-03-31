@@ -15,15 +15,15 @@ export default function LandingPage() {
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[40%] -left-[20%] w-[80%] h-[80%] rounded-full bg-blue-600/5 blur-[120px]" />
-        <div className="absolute -bottom-[40%] -right-[20%] w-[80%] h-[80%] rounded-full bg-green-600/5 blur-[120px]" />
-        <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] rounded-full bg-purple-600/3 blur-[100px]" />
+        <div className="absolute -top-[40%] -left-[20%] w-[80%] h-[80%] rounded-full bg-teal-400/8 blur-[120px]" />
+        <div className="absolute -bottom-[40%] -right-[20%] w-[80%] h-[80%] rounded-full bg-blue-400/8 blur-[120px]" />
+        <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] rounded-full bg-green-400/5 blur-[100px]" />
       </div>
 
       {/* Top Bar */}
       <header className="relative z-10 flex items-center justify-between px-10 py-6">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center backdrop-blur-sm">
+          <div className="h-10 w-10 rounded-xl bg-teal-600 border border-teal-500 flex items-center justify-center">
             <span className="text-white font-bold text-lg font-mono">M</span>
           </div>
           <div>
@@ -41,13 +41,13 @@ export default function LandingPage() {
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-10 pb-20">
         {/* Hero Text */}
         <div className="text-center mb-16 max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 rounded-full px-4 py-1.5 mb-8">
             <Zap className="h-3.5 w-3.5 text-blue-400" />
             <span className="text-xs text-muted-foreground">AI-Powered Health Intelligence Platform</span>
           </div>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
             Transforming Healthcare<br />
-            <span className="bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-teal-600 via-blue-600 to-teal-700 bg-clip-text text-transparent">
               Across 8 Nations
             </span>
           </h2>
@@ -61,9 +61,9 @@ export default function LandingPage() {
         <div className="grid grid-cols-2 gap-8 w-full max-w-5xl">
           {/* Business Plan Card */}
           <Link href="/dashboard" className="group">
-            <div className="relative h-[420px] rounded-2xl border border-white/10 bg-gradient-to-br from-blue-600/10 via-blue-600/5 to-transparent overflow-hidden transition-all duration-500 hover:border-blue-400/40 hover:shadow-[0_0_60px_-12px_rgba(59,130,246,0.3)] hover:scale-[1.02]">
+            <div className="relative h-[420px] rounded-2xl border border-teal-200 bg-gradient-to-br from-teal-50 via-white to-transparent overflow-hidden transition-all duration-500 hover:border-teal-400 hover:shadow-[0_0_40px_-12px_rgba(20,184,166,0.2)] hover:scale-[1.02]">
               {/* Card glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative h-full flex flex-col p-10">
                 <div className="flex items-start justify-between">
@@ -86,7 +86,7 @@ export default function LandingPage() {
                       { icon: Shield, label: "31 Pages", sub: "Full Detail" },
                       { icon: Brain, label: "152 Staff", sub: "By Month 24" },
                     ].map((s) => (
-                      <div key={s.label} className="bg-white/5 rounded-lg p-2.5 text-center">
+                      <div key={s.label} className="bg-gray-50 rounded-lg p-2.5 text-center border border-gray-100">
                         <s.icon className="h-4 w-4 mx-auto text-blue-400 mb-1" />
                         <p className="text-xs font-bold font-mono">{s.label}</p>
                         <p className="text-[10px] text-muted-foreground">{s.sub}</p>
@@ -105,9 +105,9 @@ export default function LandingPage() {
             rel="noopener noreferrer"
             className="group"
           >
-            <div className="relative h-[420px] rounded-2xl border border-white/10 bg-gradient-to-br from-green-600/10 via-green-600/5 to-transparent overflow-hidden transition-all duration-500 hover:border-green-400/40 hover:shadow-[0_0_60px_-12px_rgba(34,197,94,0.3)] hover:scale-[1.02]">
+            <div className="relative h-[420px] rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-transparent overflow-hidden transition-all duration-500 hover:border-blue-400 hover:shadow-[0_0_40px_-12px_rgba(59,130,246,0.2)] hover:scale-[1.02]">
               {/* Card glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative h-full flex flex-col p-10">
                 <div className="flex items-start justify-between">
@@ -133,7 +133,7 @@ export default function LandingPage() {
                       { icon: Globe, label: "8 Languages", sub: "Built-In" },
                       { icon: TrendingUp, label: "738", sub: "Screenshots" },
                     ].map((s) => (
-                      <div key={s.label} className="bg-white/5 rounded-lg p-2.5 text-center">
+                      <div key={s.label} className="bg-gray-50 rounded-lg p-2.5 text-center border border-gray-100">
                         <s.icon className="h-4 w-4 mx-auto text-green-400 mb-1" />
                         <p className="text-xs font-bold font-mono">{s.label}</p>
                         <p className="text-[10px] text-muted-foreground">{s.sub}</p>
@@ -158,7 +158,7 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 px-10 py-6 border-t border-white/5">
+      <footer className="relative z-10 px-10 py-6 border-t border-gray-200">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <span>&copy; 2026 MyEval.ai. All rights reserved.</span>
           <span className="font-mono">Prepared for qualified investors only</span>
