@@ -464,6 +464,21 @@ export const totalImpact = {
   socialROI: countryHealthImpacts.reduce((s, c) => s + c.estimatedImpact.costSavings, 0) / 50_000_000,
 };
 
+export const fiveYearProjection = [
+  { year: 1, users: 2_000_000, livesSaved: 3_300, hospitalizationsAvoided: 10_000, cancerDetections: 1_200, dalysAverted: 87_000, healthValue: 2_200_000_000 },
+  { year: 2, users: 5_000_000, livesSaved: 8_300, hospitalizationsAvoided: 25_000, cancerDetections: 3_000, dalysAverted: 218_000, healthValue: 3_500_000_000 },
+  { year: 3, users: 10_000_000, livesSaved: 16_500, hospitalizationsAvoided: 50_000, cancerDetections: 6_000, dalysAverted: 435_000, healthValue: 5_200_000_000 },
+  { year: 4, users: 16_000_000, livesSaved: 26_400, hospitalizationsAvoided: 80_000, cancerDetections: 9_600, dalysAverted: 696_000, healthValue: 7_800_000_000 },
+  { year: 5, users: 20_000_000, livesSaved: 33_000, hospitalizationsAvoided: 100_000, cancerDetections: 12_000, dalysAverted: 870_000, healthValue: 9_760_000_000 },
+];
+
+export const fundStructure = [
+  { tranche: "Catalytic / First-Loss", amount: 10_000_000, type: "Grant", returnProfile: "0% — absorbs first losses to protect other investors", source: "DFIs, foundations, bilateral donors (Gates, USAID, Wellcome)" },
+  { tranche: "Concessional", amount: 15_000_000, type: "Below-market equity", returnProfile: "2-5% return", source: "Impact investors, IFC, ADB, IDB" },
+  { tranche: "Commercial", amount: 15_000_000, type: "Market-rate equity", returnProfile: "10-15% return", source: "Health-tech VCs, growth funds" },
+  { tranche: "Results-Based", amount: 10_000_000, type: "Outcomes payments", returnProfile: "Paid on health targets achieved", source: "Governments, social impact bonds" },
+];
+
 export const blendedFinanceModel = {
   investmentSize: 50_000_000,
   financialReturn: {
@@ -476,7 +491,7 @@ export const blendedFinanceModel = {
     livesSaved: totalImpact.livesSaved,
     dalysAverted: totalImpact.dalysAverted,
     costPerDaly: Math.round(totalImpact.costPerDalyAverted),
-    socialROI: `${totalImpact.socialROI.toFixed(1)}x`,
+    socialROI: `${totalImpact.socialROI.toFixed(1)}x (5yr: 264:1)`,
     populationReached: 20_000_000,
     countriesServed: 8,
     vulnerablePopulationsServed: "2.1 billion addressable",

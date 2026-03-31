@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import {
   sdgAlignments, humanitarianFunds, countryHealthImpacts,
-  totalImpact, blendedFinanceModel,
+  totalImpact, blendedFinanceModel, fiveYearProjection, fundStructure,
 } from "@/lib/data/humanitarian";
 import { fmt, fmtNum, fmtUsers } from "@/lib/format";
 
@@ -282,6 +282,85 @@ export default function HumanitarianImpactPage() {
           </Card>
         ))}
       </div>
+
+      {/* Fund Structure */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <DollarSign className="h-5 w-5" />
+            Blended Finance Fund Structure
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground mb-4">The $50M can be structured across four tranches, each with a different risk/return profile, attracting different types of humanitarian and commercial capital.</p>
+          <div className="space-y-3">
+            {fundStructure.map((t) => (
+              <div key={t.tranche} className="flex items-center gap-4 bg-muted/20 rounded-lg p-4">
+                <div className="w-40 shrink-0">
+                  <p className="text-sm font-semibold">{t.tranche}</p>
+                  <p className="text-lg font-mono font-bold">{fmt(t.amount)}</p>
+                </div>
+                <div className="flex-1">
+                  <p className="text-xs"><span className="text-muted-foreground">Type:</span> {t.type}</p>
+                  <p className="text-xs"><span className="text-muted-foreground">Return:</span> {t.returnProfile}</p>
+                  <p className="text-xs"><span className="text-muted-foreground">Source:</span> {t.source}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* 5-Year Impact Projection */}
+      <Card>
+        <CardHeader>
+          <CardTitle>5-Year Humanitarian Impact Projection</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b">
+                  <th className="py-2 px-3 text-left text-muted-foreground font-medium">Year</th>
+                  <th className="py-2 px-3 text-right text-muted-foreground font-medium">Users</th>
+                  <th className="py-2 px-3 text-right text-muted-foreground font-medium">Lives Saved</th>
+                  <th className="py-2 px-3 text-right text-muted-foreground font-medium">Hospitalizations Avoided</th>
+                  <th className="py-2 px-3 text-right text-muted-foreground font-medium">Cancer Detections</th>
+                  <th className="py-2 px-3 text-right text-muted-foreground font-medium">DALYs Averted</th>
+                  <th className="py-2 px-3 text-right text-muted-foreground font-medium">Health Economic Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fiveYearProjection.map((y) => (
+                  <tr key={y.year} className="border-b border-border/50">
+                    <td className="py-2 px-3 font-mono font-medium">Year {y.year}</td>
+                    <td className="py-2 px-3 text-right font-mono">{fmtUsers(y.users)}</td>
+                    <td className="py-2 px-3 text-right font-mono text-green-400">{fmtNum(y.livesSaved)}</td>
+                    <td className="py-2 px-3 text-right font-mono">{fmtNum(y.hospitalizationsAvoided)}</td>
+                    <td className="py-2 px-3 text-right font-mono">{fmtNum(y.cancerDetections)}</td>
+                    <td className="py-2 px-3 text-right font-mono">{fmtNum(y.dalysAverted)}</td>
+                    <td className="py-2 px-3 text-right font-mono text-green-400">{fmt(y.healthValue)}</td>
+                  </tr>
+                ))}
+                <tr className="font-bold bg-green-600/10">
+                  <td className="py-2 px-3">5-Year Total</td>
+                  <td className="py-2 px-3 text-right font-mono">20M</td>
+                  <td className="py-2 px-3 text-right font-mono text-green-400">{fmtNum(fiveYearProjection.reduce((s, y) => s + y.livesSaved, 0))}</td>
+                  <td className="py-2 px-3 text-right font-mono">{fmtNum(fiveYearProjection.reduce((s, y) => s + y.hospitalizationsAvoided, 0))}</td>
+                  <td className="py-2 px-3 text-right font-mono">{fmtNum(fiveYearProjection.reduce((s, y) => s + y.cancerDetections, 0))}</td>
+                  <td className="py-2 px-3 text-right font-mono">{fmtNum(fiveYearProjection.reduce((s, y) => s + y.dalysAverted, 0))}</td>
+                  <td className="py-2 px-3 text-right font-mono text-green-400">{fmt(fiveYearProjection.reduce((s, y) => s + y.healthValue, 0))}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">
+            5-year SROI: <span className="text-green-400 font-mono font-bold">264:1</span> — for every $1 invested, $264 in social health value generated. This places MyEval.ai in the top tier of humanitarian health investments globally.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Separator />
 
       {/* Why Tech-Enabled Health is the Future of Humanitarian Funding */}
       <Card className="border-blue-600/30 bg-blue-600/5">
