@@ -101,9 +101,8 @@ export const fundAllocation = [
   { category: "Sales & Marketing", amount: 10_000_000, pct: 20 },
   { category: "Operations & Staff", amount: 11_000_000, pct: 22 },
   { category: "Legal & Compliance", amount: 4_000_000, pct: 8 },
-  { category: "Country Infrastructure", amount: 5_500_000, pct: 11 },
+  { category: "Country Infrastructure (9 countries)", amount: 8_000_000, pct: 16 },
   { category: "Working Capital Reserve", amount: 5_000_000, pct: 10 },
-  { category: "Contingency Fund", amount: 2_500_000, pct: 5 },
 ];
 
 export const monthlyProjections: MonthlyProjection[] = [

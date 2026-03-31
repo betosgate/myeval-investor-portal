@@ -38,6 +38,7 @@ const navItems = [
   { href: "/dashboard/countries/india", label: "India", icon: MapPin, indent: true },
   { href: "/dashboard/countries/bangladesh", label: "Bangladesh", icon: MapPin, indent: true },
   { href: "/dashboard/countries/thailand", label: "Thailand", icon: MapPin, indent: true },
+  { href: "/dashboard/countries/philippines", label: "Philippines", icon: MapPin, indent: true },
   { href: "/dashboard/countries/colombia", label: "Colombia", icon: MapPin, indent: true },
   { href: "/dashboard/countries/brazil", label: "Brazil", icon: MapPin, indent: true },
   { href: "/dashboard/countries/argentina", label: "Argentina", icon: MapPin, indent: true },
@@ -108,7 +109,7 @@ export function Sidebar() {
         <div className="rounded-lg bg-muted p-3">
           <p className="text-xs font-medium">$50M Fund</p>
           <p className="text-[10px] text-muted-foreground mt-1">
-            8 Countries &middot; 24-Month Plan
+            9 Countries &middot; 24-Month Plan
           </p>
           <p className="text-[10px] text-muted-foreground">
             Target: 20M users &middot; $97M+ revenue

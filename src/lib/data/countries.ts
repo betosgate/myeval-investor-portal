@@ -675,6 +675,85 @@ export const countries: CountryData[] = [
   },
 ];
 
+// ==================== PHILIPPINES ====================
+countries.push({
+  name: "Philippines",
+  slug: "philippines",
+  region: "asia",
+  flag: "PH",
+  population: 117_000_000,
+  gdpPerCapita: 3_900,
+  healthSpendPerCapita: 180,
+  internetPenetration: 73,
+  smartphonePenetration: 67,
+  healthSystem:
+    "PhilHealth (Philippine Health Insurance Corporation) provides universal coverage under the Universal Health Care Act of 2019 (RA 11223). Department of Health (DOH) oversees 700+ government hospitals. Strong private hospital sector (The Medical City, St. Luke's, Makati Medical Center). 54% out-of-pocket spending despite universal coverage mandate.",
+  keyAgencies: [
+    "Department of Health (DOH)",
+    "PhilHealth (Philippine Health Insurance Corporation)",
+    "Department of Information and Communications Technology (DICT)",
+    "National Privacy Commission (NPC)",
+    "Food and Drug Administration Philippines (FDA-PH)",
+  ],
+  majorPartners: [
+    "The Medical City (premier private hospital group)",
+    "St. Luke's Medical Center (2 hospitals, top private)",
+    "Metro Pacific Hospital Holdings (18 hospitals)",
+    "PhilHealth (108M+ members, universal coverage)",
+    "Globe Telehealth / KonsultaMD (largest telehealth)",
+  ],
+  entryStrategy:
+    "Enter via PhilHealth eClaims integration — PhilHealth covers 108M Filipinos and is modernizing claims processing. Partner with Metro Pacific Hospital Holdings (18 hospitals, most tech-forward private group). The Philippines has strong English proficiency (no translation needed for professional portals), massive OFW (Overseas Filipino Worker) remittance economy creating demand for family health monitoring, and the Universal Health Care Act mandates digital health adoption. Establish office in BGC (Bonifacio Global City), Taguig — the tech startup hub. FDA-PH has no specific SaMD regulation yet, creating an easy entry window.",
+  pricingModel: {
+    consumer: 5,
+    newsletter: 0.5,
+    enterprise: "$0.10 PMPM for PhilHealth/HMOs, $400/month per hospital",
+    government: "$1.5M/year DOH national license, $100K/region",
+  },
+  regulatoryRequirements: [
+    "Data Privacy Act of 2012 (RA 10173) — NPC registration required",
+    "Universal Health Care Act (RA 11223) — digital health integration mandated",
+    "FDA Philippines — health software classification (currently minimal)",
+    "SEC registration for foreign corporations",
+    "DICT digital health standards compliance",
+  ],
+  languages: ["Filipino (Tagalog)", "English"],
+  timeline: {
+    phase1: "Months 1-4: PhilHealth partnership, Metro Pacific pilot, SEC registration",
+    phase2: "Months 5-8: Hospital pilots in Manila, PhilHealth eClaims integration",
+    phase3: "Months 9-24: Scale to Visayas/Mindanao, consumer launch, DOH contract",
+    firstRevenue: "Month 5",
+  },
+  revenueProjection: { year1: 1_500_000, year2: 7_000_000 },
+  keyRisks: [
+    "Typhoon disruptions affecting infrastructure and operations",
+    "Political instability affecting health policy continuity",
+    "High out-of-pocket spending despite UHC mandate (adoption gap)",
+  ],
+  competitiveLandscape: [
+    "KonsultaMD (Globe-backed, largest telehealth, 5M+ users)",
+    "mWell (PLDT/Smart-backed health app)",
+    "HealthNow (DOH-endorsed telemedicine)",
+    "SeriousMD (practice management + telehealth)",
+  ],
+  staffing: {
+    countryManager: 1,
+    bizDev: 2,
+    techIntegration: 1,
+    govLiaison: 1,
+    support: 2,
+  },
+  investmentAllocation: 2_500_000,
+  marketSizeEstimate: 520_000_000,
+  targetUsers: { year1: 200_000, year2: 1_500_000 },
+  b2bTargets: {
+    hospitals: 40,
+    insurers: 8,
+    employers: 25,
+    govAgencies: 5,
+  },
+});
+
 export const getCountry = (slug: string) =>
   countries.find((c) => c.slug === slug);
 export const asiaCountries = countries.filter((c) => c.region === "asia");

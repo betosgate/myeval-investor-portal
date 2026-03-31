@@ -453,6 +453,33 @@ export const countryHealthImpacts: CountryHealthImpact[] = [
   },
 ];
 
+// Philippines
+countryHealthImpacts.push({
+  country: "Philippines",
+  population: 117_000_000,
+  targetUsers: 1_500_000,
+  topBurdens: [
+    { disease: "Ischemic heart disease", deathsPer100K: 118, dalysLost: 2234, preventablePercent: 35 },
+    { disease: "Stroke", deathsPer100K: 67, dalysLost: 1345, preventablePercent: 30 },
+    { disease: "Diabetes", deathsPer100K: 34, dalysLost: 987, preventablePercent: 40 },
+    { disease: "Lower respiratory infections", deathsPer100K: 52, dalysLost: 1567, preventablePercent: 30 },
+    { disease: "Tuberculosis", deathsPer100K: 25, dalysLost: 876, preventablePercent: 45 },
+  ],
+  vulnerablePopulations: [
+    { group: "OFW families", size: "10M+ overseas worker families", howServed: "Remote family health monitoring — workers abroad can track their family's health evaluations" },
+    { group: "Urban poor (Manila slums)", size: "4M in informal settlements", howServed: "Free tier on smartphone — most slum residents have mobile phones" },
+    { group: "Visayas/Mindanao underserved", size: "40M in provinces with limited health access", howServed: "Mobile-first platform bridges geographic barriers; English + Filipino language" },
+    { group: "Indigenous peoples (Lumad, Igorot)", size: "14-17M indigenous Filipinos", howServed: "Filipino-language AI evaluation reaches communities excluded from English-only health tech" },
+  ],
+  estimatedImpact: {
+    livesSaved: 2_200,
+    dalysAverted: 34_000,
+    hospitalizationsAvoided: 12_000,
+    earlyDetections: 26_000,
+    costSavings: 52_000_000,
+  },
+});
+
 export const totalImpact = {
   livesSaved: countryHealthImpacts.reduce((s, c) => s + c.estimatedImpact.livesSaved, 0),
   dalysAverted: countryHealthImpacts.reduce((s, c) => s + c.estimatedImpact.dalysAverted, 0),
