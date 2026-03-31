@@ -129,9 +129,22 @@ export default function PhilippinesReportHome() {
       </Card>
 
       {/* Footer */}
-      <div className="text-center py-4 text-xs text-muted-foreground space-y-1">
+      <div className="text-center py-6 text-xs text-muted-foreground space-y-2">
         <p>Sources: IMF, World Bank, PSA, BSP, WHO, UNDP, Google/Temasek/Bain, OECD PISA</p>
-        <p className="font-mono">Prepared for qualified officials only &middot; &copy; 2026</p>
+        <div className="flex items-center justify-center gap-4 pt-2">
+          <div>
+            <p className="text-muted-foreground">Presented by</p>
+            <p className="font-semibold text-foreground">Tom Langland</p>
+            <p className="text-[10px]">Global Consultant</p>
+          </div>
+          <Separator orientation="vertical" className="h-8" />
+          <div>
+            <p className="text-muted-foreground">Developed by</p>
+            <p className="font-semibold text-foreground">Beto Paredes</p>
+            <p className="text-[10px]">Chief Visionary Officer</p>
+          </div>
+        </div>
+        <p className="font-mono text-[10px] pt-2">Prepared for qualified officials only &middot; &copy; 2026</p>
       </div>
     </div>
   );

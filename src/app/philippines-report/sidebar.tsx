@@ -79,10 +79,9 @@ export function PhilippinesSidebar() {
             14 sections &middot; 117M people &middot; $480B economy
           </p>
         </div>
-        <div className="mt-3 text-center">
-          <Link href="/" className="text-[10px] text-muted-foreground hover:text-foreground">
-            &larr; Back to MyEval.ai Portal
-          </Link>
+        <div className="mt-3 text-center space-y-1">
+          <p className="text-[10px] text-muted-foreground">Presented by <span className="font-semibold text-foreground">Tom Langland</span></p>
+          <p className="text-[10px] text-muted-foreground">Developed by <span className="font-semibold text-foreground">Beto Paredes</span></p>
         </div>
       </div>
     </aside>

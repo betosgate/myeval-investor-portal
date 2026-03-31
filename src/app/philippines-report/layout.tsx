@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { PhilippinesSidebar } from "./sidebar";
+
+export const metadata: Metadata = {
+  title: "Republic of the Philippines — Comprehensive Economic Strategy Report",
+  description:
+    "A 14-section economic strategy report covering macroeconomic fundamentals, sector analysis, healthcare, digital transformation, geopolitics, and policy recommendations for the Republic of the Philippines. Presented by Tom Langland. Developed by Beto Paredes.",
+};
 
 export default function PhilippinesReportLayout({
   children,
