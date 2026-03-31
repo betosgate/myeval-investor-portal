@@ -27,6 +27,7 @@ const navItems = [
   { href: "/philippines-report/transformation-models", label: "Transformation Models", icon: Landmark },
   { href: "/philippines-report/policy-recommendations", label: "Policy Recommendations", icon: FileText },
   { href: "/philippines-report/investment-opportunities", label: "Investment Opportunities", icon: Target },
+  { href: "/philippines-report/campaign-strategy", label: "Campaign & Activation", icon: Scale },
 ];
 
 export function PhilippinesSidebar() {
