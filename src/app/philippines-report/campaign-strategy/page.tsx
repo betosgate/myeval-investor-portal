@@ -45,13 +45,9 @@ export default function CampaignStrategyPage() {
             { block: "Business Community", message: "Energy costs will go down. Permitting will be digital. Infrastructure will be finished. The SWF gives you a reliable, professional Filipino equity partner. Rule of law — your contracts enforced, corruption not a cost of business.", channel: "Business forums (MBC, PCCI), business media, private briefings with CEOs" },
           ].map((v) => (
             <div key={v.block} className="bg-muted/20 rounded-lg p-3 border">
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <h4 className="text-sm font-semibold">{v.block}</h4>
-                  <p className="text-xs text-muted-foreground mt-1">&ldquo;{v.message}&rdquo;</p>
-                </div>
-                <Badge variant="outline" className="text-[10px] shrink-0 ml-2">{v.channel}</Badge>
-              </div>
+              <h4 className="text-sm font-semibold">{v.block}</h4>
+              <p className="text-xs text-muted-foreground mt-1">&ldquo;{v.message}&rdquo;</p>
+              <Badge variant="outline" className="text-[10px] mt-2">{v.channel}</Badge>
             </div>
           ))}
         </CardContent>
@@ -136,12 +132,10 @@ export default function CampaignStrategyPage() {
             { phase: "Feb — May 2028", title: "The Campaign (90 days)", desc: "Rallies, debates, advertising, ground organizing. Message, coalition, and machinery must be set. Execution, not strategy." },
             { phase: "May 8, 2028", title: "ELECTION DAY", desc: "" },
           ].map((p) => (
-            <div key={p.phase} className="flex items-start gap-3 bg-muted/20 rounded-lg p-3 border">
-              <Badge variant="outline" className="font-mono text-[10px] shrink-0 w-28 justify-center">{p.phase}</Badge>
-              <div>
-                <p className="text-sm font-semibold">{p.title}</p>
-                {p.desc && <p className="text-xs text-muted-foreground">{p.desc}</p>}
-              </div>
+            <div key={p.phase} className="bg-muted/20 rounded-lg p-3 border">
+              <Badge variant="outline" className="font-mono text-[10px] mb-1">{p.phase}</Badge>
+              <p className="text-sm font-semibold">{p.title}</p>
+              {p.desc && <p className="text-xs text-muted-foreground mt-1">{p.desc}</p>}
             </div>
           ))}
         </CardContent>
@@ -213,12 +207,8 @@ export default function CampaignStrategyPage() {
             { position: "BARMM Liaison", type: "Trusted by BOTH national + BARMM government", mandate: "20 health station sites, SWF allocation for BARMM, block grant implementation, electrification + connectivity" },
           ].map((m) => (
             <div key={m.position} className="bg-muted/20 rounded-lg p-3 border">
-              <div className="flex items-start justify-between">
-                <div>
-                  <p className="text-sm font-semibold">{m.position}</p>
-                  <p className="text-xs text-muted-foreground">Type: {m.type}</p>
-                </div>
-              </div>
+              <p className="text-sm font-semibold">{m.position}</p>
+              <p className="text-xs text-muted-foreground mt-1">Type: {m.type}</p>
               <p className="text-xs text-muted-foreground mt-1"><span className="font-semibold">100-day mandate:</span> {m.mandate}</p>
             </div>
           ))}

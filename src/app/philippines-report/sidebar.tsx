@@ -53,7 +53,7 @@ export function PhilippinesSidebar() {
         </Link>
       </div>
       <Separator />
-      <ScrollArea className="flex-1 px-3 py-4">
+      <div className="flex-1 overflow-y-auto px-3 py-4" style={{ WebkitOverflowScrolling: "touch" }}>
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
@@ -76,7 +76,7 @@ export function PhilippinesSidebar() {
             );
           })}
         </nav>
-      </ScrollArea>
+      </div>
       <Separator />
       <div className="p-4">
         <div className="rounded-xl bg-blue-50 border border-blue-200 p-3">

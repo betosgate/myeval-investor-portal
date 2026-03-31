@@ -88,7 +88,7 @@ export function Sidebar() {
         </Link>
       </div>
       <Separator />
-      <ScrollArea className="flex-1 px-3 py-4">
+      <div className="flex-1 overflow-y-auto px-3 py-4" style={{ WebkitOverflowScrolling: "touch" }}>
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href || (item.href === "/dashboard" && pathname === "/dashboard");
@@ -112,7 +112,7 @@ export function Sidebar() {
             );
           })}
         </nav>
-      </ScrollArea>
+      </div>
       <Separator />
       <div className="p-4">
         <div className="rounded-lg bg-muted p-3">
